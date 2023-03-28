@@ -1,0 +1,101 @@
+[03-Dec-2018 15:44:57 Etc/GMT] PHP Warning:  include(../Connection.php): failed to open stream: No such file or directory in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:44:57 Etc/GMT] PHP Warning:  include(../Connection.php): failed to open stream: No such file or directory in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:44:57 Etc/GMT] PHP Warning:  include(): Failed opening '../Connection.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:45:04 Etc/GMT] PHP Warning:  include(../Connection.php): failed to open stream: No such file or directory in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:45:04 Etc/GMT] PHP Warning:  include(../Connection.php): failed to open stream: No such file or directory in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:45:04 Etc/GMT] PHP Warning:  include(): Failed opening '../Connection.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:45:07 Etc/GMT] PHP Warning:  include(../Connection.php): failed to open stream: No such file or directory in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:45:07 Etc/GMT] PHP Warning:  include(../Connection.php): failed to open stream: No such file or directory in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[03-Dec-2018 15:45:07 Etc/GMT] PHP Warning:  include(): Failed opening '../Connection.php' for inclusion (include_path='.:/opt/alt/php71/usr/share/pear') in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 2
+[27-Dec-2018 10:12:03 Etc/GMT] PHP Notice:  Undefined index: status in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 11
+[27-Dec-2018 10:15:25 Etc/GMT] PHP Notice:  Undefined index: status in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 11
+[27-Dec-2018 10:17:07 Etc/GMT] PHP Notice:  Undefined index: status in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 11
+[27-Dec-2018 10:23:33 Etc/GMT] PHP Notice:  Undefined index: status in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 11
+[21-Jan-2019 10:17:45 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home/dharmani/public_html/OrlandoAdmin/Config/Connection.php on line 6
+[21-Jan-2019 10:17:48 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 5
+[21-Jan-2019 10:17:48 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 6
+[21-Jan-2019 10:17:48 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 8
+[21-Jan-2019 10:17:48 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 9
+[21-Jan-2019 10:17:48 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 10
+[07-Feb-2019 07:05:30 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/OrlandoAdmin/Config/Connection.php on line 6
+[07-Feb-2019 07:07:39 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/OrlandoAdmin/Config/Connection.php on line 6
+[07-Feb-2019 07:09:46 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/OrlandoAdmin/Config/Connection.php on line 6
+[06-Mar-2019 05:57:18 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 9
+[06-Mar-2019 05:57:18 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 10
+[06-Mar-2019 05:57:36 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 9
+[06-Mar-2019 05:57:36 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/dharmani/public_html/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:14:09 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:14:29 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:14:29 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:14:29 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:14:29 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:14:29 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:14:29 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:15:01 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:15:01 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:15:01 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:15:01 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:15:01 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:15:01 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:15:19 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:15:19 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:15:19 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:15:19 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:15:19 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:15:19 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:15:24 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:15:24 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:15:24 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:15:24 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:15:24 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:15:24 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:15:41 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:15:42 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:15:42 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:15:42 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:15:42 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:15:42 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:16:29 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:16:29 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:16:29 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:16:29 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:16:29 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:16:29 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[03-Apr-2019 07:16:50 Etc/GMT] PHP Warning:  mysqli_connect(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2) in /home/dharmani/public_html/app/OrlandoAdmin/Config/Connection.php on line 6
+[03-Apr-2019 07:16:50 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 5
+[03-Apr-2019 07:16:50 Etc/GMT] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 6
+[03-Apr-2019 07:16:50 Etc/GMT] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 8
+[03-Apr-2019 07:16:50 Etc/GMT] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 9
+[03-Apr-2019 07:16:50 Etc/GMT] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/dharmani/public_html/app/OrlandoAdmin/Login/login.php on line 10
+[14-Dec-2021 00:57:51 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 171
+[14-Dec-2021 00:57:51 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 173
+[14-Dec-2021 00:57:53 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 171
+[14-Dec-2021 00:57:53 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 173
+[14-Dec-2021 00:58:03 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 171
+[14-Dec-2021 00:58:03 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 173
+[14-Dec-2021 00:58:06 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 171
+[14-Dec-2021 00:58:06 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 173
+[17-Dec-2021 02:02:32 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 30
+[17-Dec-2021 02:02:34 America/Chicago] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 30
+[17-Dec-2021 02:02:58 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 33
+[17-Dec-2021 02:03:00 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 33
+[17-Dec-2021 02:03:06 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 33
+[18-Mar-2022 09:55:52 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home4/mylogin/cheapthrillstix.com/app/appadmin/Config/Connection.php on line 10
+[18-Mar-2022 09:55:56 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home4/mylogin/cheapthrillstix.com/app/appadmin/Config/Connection.php on line 10
+[18-Mar-2022 09:55:56 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 9
+[18-Mar-2022 09:55:56 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 11
+[18-Mar-2022 09:55:56 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 16
+[18-Mar-2022 09:55:56 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 17
+[18-Mar-2022 09:55:56 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 18
+[18-Mar-2022 09:56:03 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home4/mylogin/cheapthrillstix.com/app/appadmin/Config/Connection.php on line 10
+[18-Mar-2022 09:56:03 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 9
+[18-Mar-2022 09:56:03 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 11
+[18-Mar-2022 09:56:03 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 16
+[18-Mar-2022 09:56:03 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 17
+[18-Mar-2022 09:56:03 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 18
+[18-Mar-2022 09:56:19 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home4/mylogin/cheapthrillstix.com/app/appadmin/Config/Connection.php on line 10
+[18-Mar-2022 09:56:19 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 9
+[18-Mar-2022 09:56:19 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 11
+[18-Mar-2022 09:56:19 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 16
+[18-Mar-2022 09:56:19 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 17
+[18-Mar-2022 09:56:19 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/cheapthrillstix.com/app/appadmin/Login/login.php on line 18

@@ -1,0 +1,278 @@
+[21-Jul-2022 08:45:58 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:46:10 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:46:21 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:46:56 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:47:08 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:48:31 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:48:52 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:50:50 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:52:13 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:52:49 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[21-Jul-2022 08:53:18 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[04-Aug-2022 07:55:54 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 07:55:54 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[04-Aug-2022 07:56:16 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 07:56:16 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[04-Aug-2022 07:56:53 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 07:56:53 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[04-Aug-2022 08:49:10 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 08:49:10 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[04-Aug-2022 08:53:59 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 08:53:59 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[04-Aug-2022 08:55:32 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 08:55:32 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[04-Aug-2022 09:02:31 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 42
+[04-Aug-2022 09:02:31 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 50
+[07-Aug-2022 01:18:14 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:47:34 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:47:42 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:47:56 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:48:07 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:48:25 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:48:31 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:48:40 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:49:51 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[17-Aug-2022 08:49:52 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[07-Sep-2022 11:36:05 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[07-Sep-2022 11:36:56 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[07-Sep-2022 11:36:56 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[07-Sep-2022 11:37:01 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[08-Sep-2022 09:17:29 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[08-Sep-2022 09:17:57 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[08-Sep-2022 09:18:12 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 177 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(177): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[08-Sep-2022 14:13:06 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[08-Sep-2022 16:42:26 America/Chicago] PHP Warning:  mysqli_query(): Empty query in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/fetch_all_steps.php on line 6
+[08-Sep-2022 16:43:33 America/Chicago] PHP Notice:  Undefined variable: sql in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/fetch_all_steps.php on line 9
+[08-Sep-2022 16:43:33 America/Chicago] PHP Warning:  mysqli_query(): Empty query in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/fetch_all_steps.php on line 9
+[14-Dec-2022 13:41:27 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[15-Dec-2022 15:36:46 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[23-Dec-2022 13:20:56 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[23-Dec-2022 13:21:18 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[23-Dec-2022 13:21:43 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[23-Dec-2022 13:23:28 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[23-Dec-2022 13:23:57 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[26-Dec-2022 05:29:38 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[26-Dec-2022 07:05:20 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[19-Feb-2023 07:41:12 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[16-Mar-2023 10:56:19 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:56:19 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 35
+[16-Mar-2023 10:56:19 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 38
+[16-Mar-2023 10:56:19 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 43
+[16-Mar-2023 10:56:19 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 50
+[16-Mar-2023 10:57:15 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:57:15 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 35
+[16-Mar-2023 10:57:15 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 38
+[16-Mar-2023 10:57:15 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 43
+[16-Mar-2023 10:57:15 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 50
+[16-Mar-2023 10:57:44 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:57:44 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 35
+[16-Mar-2023 10:57:44 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 38
+[16-Mar-2023 10:57:44 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 43
+[16-Mar-2023 10:57:44 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 50
+[16-Mar-2023 10:58:23 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:58:23 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 35
+[16-Mar-2023 10:58:23 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 38
+[16-Mar-2023 10:58:23 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 43
+[16-Mar-2023 10:58:23 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 50
+[19-Mar-2023 13:58:15 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[24-Mar-2023 08:31:01 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[24-Mar-2023 08:31:59 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[24-Mar-2023 08:32:44 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php on line 179 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/qrCreateModified.php(179): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[26-Mar-2023 15:31:40 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 43
+[26-Mar-2023 15:31:40 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 51
+[26-Mar-2023 15:31:45 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 43
+[26-Mar-2023 15:31:45 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 51
+[26-Mar-2023 15:34:02 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 43
+[26-Mar-2023 15:34:02 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 51
+[27-Mar-2023 08:16:57 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[27-Mar-2023 08:17:10 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[27-Mar-2023 08:19:58 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137
+[27-Mar-2023 08:20:23 America/Chicago] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to chillerlan\QRCode\QRCode::render() must be of the type string, null given, called in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php on line 181 and defined in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php:137
+Stack trace:
+#0 /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/ioslogin.php(181): chillerlan\QRCode\QRCode->render(NULL)
+#1 {main}
+  thrown in /home4/mylogin/dbaseconnect.com/cheapthrills/QrCode/src/QRCode.php on line 137

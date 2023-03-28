@@ -1,0 +1,456 @@
+﻿<?php
+
+ include('../Config/Connection.php');
+
+ //Check Login
+
+      session_start();
+
+       $login_check=$_SESSION['id'];
+
+     if ($login_check!='1')
+
+     {
+      $_SESSION['intended_url'] = $_SERVER['SCRIPT_URI'];
+       header("../Login/login.php");
+
+     }
+
+     
+
+    //End Login
+
+    //Insert Customers
+
+    if(isset($_POST['customer']))
+
+    {
+
+      $fname=$_POST['fname'];
+
+      $lname=$_POST['lname'];
+
+      $phone=$_POST['phone'];
+      $country_code=$_POST['country_code'];
+      $country_code_name = $_POST['add_customer_country_code'];
+      
+
+      // $mobnumber1  = str_replace("(", "", $mobnumber);
+
+      //  $mobnumber2  = str_replace(")", "", $mobnumber1);
+
+       
+
+      //  $mobnumber3  = str_replace("-", "", $mobnumber2);
+
+      //   $mobnumber4  = str_replace(" ", "", $mobnumber3);
+
+     // var_dump($mobnumber4);die;
+
+       //$lastvisit=$_POST['lastvisit'];
+
+      $city=$_POST['city'];
+
+      $ethnicity=$_POST['ethnicity'];
+       $event=$_POST['event'];
+
+      $referral=strtolower($_POST['referral']) === 'friend' ? $_POST['referral'] .' ('.$_POST['friend'].')': $_POST['referral'];
+
+      $current_date=date("Y/m/d");
+
+       $newDate = date("m/d/Y", strtotime($current_date));
+
+      $customer_insert = "INSERT INTO customer(event,first_name,Last_name,country_code,country_code_name,Phone_number,last_visit,homecity,ethnicity,referral)VALUES ('$event','$fname','$lname','$country_code','$country_code_name','$phone','$newDate','$city','$ethnicity','$referral')";
+      
+      $result = mysqli_query($db,$customer_insert);
+
+       $id= mysqli_insert_id($db); 
+
+      header( "Location: ../Orders/Addorders.php?id=$id" );
+
+     /* header( "Location: CustomersDetails.php" );*/
+
+    }
+
+    //End Insert
+
+    //Include Header
+
+ include('../includes/header.php');
+
+ //End Header
+
+?>
+
+      <div id="content-wrapper">
+
+       <div class="container-fluid">
+
+	  
+
+	  <div class="col-md-12">
+
+		<h3>Add Customer</h3>
+
+	  <hr>
+
+	   </div>	
+
+	  <?php
+
+    $ethnicityname = "SELECT * FROM ethnicity order by ethncity_name";
+    $ethnicitsult = mysqli_query($db,$ethnicityname);
+
+    //Referral Types
+    $referral_sql = "SELECT * FROM referral_types where active = 0 order by name asc ";
+    $referral_result = mysqli_query($db, $referral_sql);
+    $referral_data = mysqli_fetch_all($referral_result, MYSQLI_ASSOC);
+
+   ?>
+
+
+	   <div class="container" style="display:flex;justify-content:center;margin-top:4%; ">
+
+	   <div class="col-md-7">
+
+	   
+
+      <form action="AddCustomer.php" autocomplete='off' method="post" onblur="return validation();" name="vfrom">
+
+        <div class="form-group">
+
+    <label for="fname">First Name *</label>
+
+    <input type="text" required class="form-control" onblur='setTimeout(()=>{$("#userlist").remove();}, 200)' onkeyup="checkUser(this,true);" name="fname" id="fname" aria-describedby="fname"  placeholder="First Name *" value="" >
+
+    <span id="username"  class="text-danger font-weight-bold"> </span>
+
+  </div>
+
+  <div class="form-group">
+
+    <label for="lname">Last Name *</label>
+    <input type="hidden" name="country_code" id="country_code" value="">
+
+    <input type="text" class="form-control" name="lname"id="lname" aria-describedby="lname" required placeholder="Last Name *" value="" >
+
+    <span id="lastname" class="text-danger font-weight-bold"> </span>
+
+  </div>
+
+   <div class="form-group">
+    <label for="mobnumber">Mobile Number *</label>
+    <br>
+    <input type="tel" id="phone" required class="form-control" name="phone" aria-describedby="mobnumber" placeholder="Mobile Number *"  value="">
+    <input type="hidden" id="add_customer_country_code" name="add_customer_country_code" value="">
+  </div>
+
+
+
+  
+
+   <div class="form-group">
+
+    <label for="Homecity">Home City *</label>
+
+    
+
+    <input type="text" class="form-control" name="city" id="city" aria-describedby="email" required placeholder="Home City *" value="">
+
+    <span id="homecity" class="text-danger font-weight-bold"></span>
+
+  </div> 
+
+ <div class="form-group">
+
+   <label for="fname">Ethnicity *</label> 
+
+      <select required  class="form-control" name="ethnicity" id="ethnicity" >
+
+         <option value="">Please Select Ethnicity..</option>
+
+         <?php
+
+       while($ethnicitsult1 = mysqli_fetch_assoc($ethnicitsult)) {
+
+        $ethncity_name=$ethnicitsult1['ethncity_name'];
+
+
+
+          ?>
+
+     <option value="<?=$ethncity_name?>"><?=$ethncity_name?></option>
+
+     <?php
+
+
+
+   }?>
+
+    </select>
+
+</div>
+
+   <div class="form-group">
+    <label for="mobnumber">Purpose of this planned trip? (For Disney, Conference, what brought them to town) *</label>
+    <br>
+    <input type="text" id="phone" required class="form-control" name="event" aria-describedby="text" placeholder="Type Specific Event Name Here*"  value="">
+    <input type="hidden" id="add_customer_country_code" name="add_customer_country_code" value="">
+  </div>
+
+
+<?php if(count($referral_data) > 0):  //check for referral_data ?>
+<!-- Referral types -->
+ <div class="form-group">
+   <label for="referral">Referred Through *</label> 
+      <select required  class="form-control" name="referral" id="referral" onchange="referralInput(this);">
+         <option value="">Please Select Referral..</option>
+
+        <?php foreach($referral_data as $referral_option) {
+        ?>
+          <option value="<?=$referral_option['id']?>"> <?=$referral_option['name']?> </option>
+
+        <?php } ?>
+
+    </select>
+
+</div>
+
+<?php endif; //check for referral_data ?>
+
+
+  <div class="form-group" style="text-align:center;">
+    <button type="submit"  id="abcd"  onclick="myFunction()" name="customer"class="btn btn-primary">Submit</button>
+  </div>
+
+</form>
+
+
+
+</div >
+
+</div>
+
+</div>
+
+      </div>
+
+      <!-- /.content-wrapper -->
+
+
+
+    </div>
+
+    <!-- /#wrapper -->
+
+
+
+    <!-- Scroll to Top Button-->
+
+    <a class="scroll-to-top rounded" href="#page-top">
+
+      <i class="fas fa-angle-up"></i>
+
+    </a>
+
+
+
+    <!-- Logout Modal-->
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+
+              <span aria-hidden="true">×</span>
+
+            </button>
+
+          </div>
+
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+
+          <div class="modal-footer">
+
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+
+            <a class="btn btn-primary" href="login.html">Logout</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+
+ $.validate({
+
+    lang: 'en'
+
+  });
+
+ 
+
+</script>
+
+<script>
+
+    $("#TextBox1").on("keyup", function(e) {
+
+  e.target.value = e.target.value.replace(/[^\d]/, "");
+
+ e.target.value=e.target.value.replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-');
+
+  e.target.value=e.target.value.replace(/[^\w ]/,'');
+
+ console.log(e.target.value.length);
+
+  if (e.target.value.length === 10) {
+
+    // do stuff
+
+    var ph = e.target.value.split("");
+
+    ph.splice(3, 0, ") "); ph.splice(7, 0, "-");
+
+    $("#TextBox1").val('('+ph.join(""))
+
+  }
+
+})
+
+</script>
+
+
+<script src="../build/js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "../build/js/utils.js",
+    });
+  </script>
+  <script>
+    function myFunction(){
+    var a=document.getElementsByClassName('iti__selected-flag')[0].title;
+      const myArray = a.split(" ");
+      var code=myArray[myArray.length - 1];
+      document.getElementById('country_code').value =code;
+   
+ $('.iti__country-list').each(function(index,element){
+        var b = $(element).find('.iti__active').attr('data-country-code');
+        $('#add_customer_country_code').val(b);
+
+      })
+
+
+
+
+    }
+
+
+  </script>
+
+<script>
+  function referralInput(el){
+    if(el.value == '8'){
+      let lable = "<label for='referral'>Friend Name</label>";
+      let input = $("<input type='text' class='form-control' name='friend' placeholder='Friend Name' onblur='setTimeout(()=>{$(\"#userlist\").remove();},200)' onkeyup='checkUser(this);' required>");
+      let input2 = $("<input id='userid' type='hidden' name='userid'>");
+      let div = $('<div></div').attr('class','form-group').attr('id','friend').append(lable, input, input2);
+      $(el).parent().after(div)
+      
+    }else{
+      $('#friend').remove();
+    }
+  }
+  
+  
+  function checkUser(elem, newuser=false){
+    if(elem.value){
+      ch = elem.value;
+    }else{
+      $('#userlist').remove();
+      return false;
+    }
+    
+    if(newuser){
+      var userlink = 'UpdateCustomer.php?id=';
+      var useraction = '';
+    }else{
+      var userlink = '#';
+      var useraction = "onclick='setUser(this);'";
+    }
+    
+    $.ajax({
+      url: '../Customers/check_user.php?user=' + ch,
+      success: function(response) {
+        console.log(response);
+        data = JSON.parse(response);
+        let suggestions = $("<div></div>").addClass('dropdown').attr('id','userlist');
+          let list = $("<div id='selectuser' class='dropdown-menu show bg-light'></div>");
+          if(data.status == true){
+            data.data.forEach(element => {
+              listItem = $('<a onclick="setUser(this);" '+ useraction +'></a>').addClass('dropdown-item text-dark').attr('data-key', element.id).attr('href', userlink + element.id).html(element.name);
+              list.append(listItem);
+            });
+            
+          }
+
+          suggestions.html(list);
+          $('#userlist').remove();
+          $(elem).after(suggestions);
+        }
+
+      });
+
+  }
+
+  function setUser(op){
+    $('#userid').val($(op).data('key'));
+    console.log($(op).data('key'));
+    $('input[name=friend]').val($(op).text());
+    $('#selectuser').hide();
+
+  }
+
+</script>
+
+
+  </body>
+
+</html>
+

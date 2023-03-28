@@ -1,0 +1,15 @@
+[06-Aug-2022 08:55:47 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[06-Aug-2022 08:55:49 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[06-Aug-2022 08:55:53 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[06-Aug-2022 08:56:03 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[10-Aug-2022 13:33:50 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[10-Aug-2022 13:33:55 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[10-Aug-2022 13:34:01 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[10-Aug-2022 13:34:07 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[10-Aug-2022 13:34:13 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[02-Sep-2022 20:09:14 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[02-Sep-2022 20:09:17 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[02-Sep-2022 20:09:25 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[18-Oct-2022 11:39:03 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[18-Oct-2022 11:39:05 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18
+[18-Oct-2022 11:39:47 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Ajax/DisableUser.php on line 18

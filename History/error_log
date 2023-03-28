@@ -1,0 +1,2 @@
+[12-Sep-2022 16:25:00 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/History/AddHistory.php on line 517
+[12-Sep-2022 16:25:15 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/History/AddHistory.php on line 518

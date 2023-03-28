@@ -1,0 +1,7 @@
+AuthName "cheap.admksol.com statistics"
+AuthType Basic
+AuthUserFile /home/admksol/domains/cheap.admksol.com/.stats-htpasswd
+require valid-user
+<Files .stats-htpasswd>
+deny from all
+</Files>

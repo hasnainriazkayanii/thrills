@@ -1,0 +1,12 @@
+<?php
+   define('DB_SERVER', 'localhost');
+
+   define('DB_USERNAME', 'admksol');
+
+   define('DB_PASSWORD', 'Yf9Wkjub4PI1Dj9');
+
+   define('DB_DATABASE', 'cheap2');
+
+   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+
+?>

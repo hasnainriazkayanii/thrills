@@ -1,0 +1,51 @@
+<?php
+$ticket_on_name = $rowTicket['name_on_ticket'];
+
+// color for each set link
+if(!array_key_exists($rowTicket['set_link'], $colorArray)){
+    $rand = str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, 0, STR_PAD_LEFT);
+    $colorArray[$rowTicket['set_link']] = '#' . $rand;
+}
+
+if ($rowTicket['tp_universal'] == '1') {
+    $tickeId=$rowTicket['ticketshowid'];
+    $expire=$rowTicket['expire_date'];
+   
+    echo "*****".$ticket_on_name;
+    if($rowTicket['type']=="adult") {
+    $type="A";
+    }
+    elseif($rowTicket['type']=="child")
+    {
+    $type="C";
+    }
+    elseif($rowTicket['type']=="comp")
+    {
+    $type="COM";
+    } 
+    else 
+    {
+    $type="YOU";
+    }
+    $DateTotimeStamp=strtotime($expire);
+
+    $expire=date("d",$DateTotimeStamp);
+
+    $LastTicket=substr($tickeId, -4);
+    //$ticketToShow=$type.' '.$LastTicket.' '.$expire;
+    $ticketToShow=$LastTicket.''.'X'.$expire;
+    echo '<option data-color="'.$colorArray[$rowTicket['set_link']].'" value="'.$tickeId.'"> '.$ticket_count.'-'.$rowTicket['set_link'].'-'.$ticketToShow.'</option>';
+    
+} else if($rowTicket['tp_code'] == 'CF') {
+    $tickeId=$rowTicket['ticketshowid'];
+    $LastTicket=substr($tickeId, -8);
+    $ticketToShow = $rowTicket['tp_code']. " " . $LastTicket . " " . $rowTicket['gender']; 
+    echo '<option data-color="'.$colorArray[$rowTicket['set_link']].'" value="'.$tickeId.'">'.$ticket_count.'-'.$rowTicket['set_link'].'-'.$ticketToShow.'</option>';
+} else {
+    $tickeId=$rowTicket['ticketshowid'];
+    $LastTicket=substr($tickeId, -8);
+    $ticketToShow = $rowTicket['tp_code']. " " . $LastTicket;
+    echo '<option data-color="'.$colorArray[$rowTicket['set_link']].'" value="'.$tickeId.'">'.$ticket_count.'-'.$rowTicket['set_link'].'-'.$ticketToShow.'</option>';
+}
+?>
+                                

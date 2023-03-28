@@ -1,0 +1,5 @@
+[28-Mar-2023 13:17:27 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Report/Report.php on line 200
+[28-Mar-2023 13:17:27 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Report/Report.php on line 200
+[28-Mar-2023 13:17:27 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Report/Report.php on line 200
+[28-Mar-2023 13:17:27 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Report/Report.php on line 200
+[28-Mar-2023 13:17:27 America/New_York] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Report/Report.php on line 200

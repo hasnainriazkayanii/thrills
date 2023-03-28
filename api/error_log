@@ -1,0 +1,27 @@
+[31-Oct-2022 15:22:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[31-Oct-2022 15:22:57 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[31-Oct-2022 15:22:57 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[31-Oct-2022 15:23:34 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[31-Oct-2022 15:23:34 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[31-Oct-2022 15:23:34 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[27-Dec-2022 16:21:57 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[27-Dec-2022 16:21:57 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[27-Dec-2022 16:21:57 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[27-Dec-2022 16:22:00 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[27-Dec-2022 16:22:00 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[27-Dec-2022 16:22:00 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[28-Dec-2022 10:06:46 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[28-Dec-2022 10:06:46 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[28-Dec-2022 10:06:46 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[10-Feb-2023 08:55:25 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[10-Feb-2023 08:55:25 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[10-Feb-2023 08:55:25 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[10-Feb-2023 08:55:33 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[10-Feb-2023 08:55:33 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[10-Feb-2023 08:55:33 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[10-Feb-2023 08:55:41 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[10-Feb-2023 08:55:41 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[10-Feb-2023 08:55:41 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29
+[09-Mar-2023 00:23:28 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2002): No such file or directory in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[09-Mar-2023 00:23:28 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 23
+[09-Mar-2023 00:23:28 America/Chicago] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/api/DisableUser.php on line 29

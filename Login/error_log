@@ -1,0 +1,20 @@
+[15-Mar-2023 02:05:18 America/Chicago] PHP Warning:  mysqli_connect(): (HY000/2006): MySQL server has gone away in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:56:11 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:56:14 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:56:14 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 9
+[16-Mar-2023 10:56:14 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 11
+[16-Mar-2023 10:56:14 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 16
+[16-Mar-2023 10:56:14 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 17
+[16-Mar-2023 10:56:14 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 18
+[16-Mar-2023 10:56:21 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:56:21 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 9
+[16-Mar-2023 10:56:21 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 11
+[16-Mar-2023 10:56:21 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 16
+[16-Mar-2023 10:56:21 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 17
+[16-Mar-2023 10:56:21 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 18
+[16-Mar-2023 10:56:39 America/Chicago] PHP Warning:  mysqli_connect(): (08004/1040): Too many connections in /home4/mylogin/dbaseconnect.com/cheapthrills/Config/Connection.php on line 27
+[16-Mar-2023 10:56:39 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 9
+[16-Mar-2023 10:56:39 America/Chicago] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 11
+[16-Mar-2023 10:56:39 America/Chicago] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, bool given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 16
+[16-Mar-2023 10:56:39 America/Chicago] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 17
+[16-Mar-2023 10:56:39 America/Chicago] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home4/mylogin/dbaseconnect.com/cheapthrills/Login/login.php on line 18
