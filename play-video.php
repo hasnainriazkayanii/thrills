@@ -63,29 +63,29 @@ if (isset($_GET['file_name']) && !empty($_GET['file_name'])) {
     }
 }
 if ($token != '' && $file_name != '') {
-    $api_url =  'http://174.69.26.155:467/cgi-bin/api.cgi?token=' . $token . '&cmd=Playback&source=' . $file_name . '&output=' . $file_name;
+    $file_name =  'http://174.69.26.155:467/cgi-bin/api.cgi?token=' . $token . '&cmd=Playback&source=' . $file_name . '&output=' . $file_name;
     // $api_url = 'https://api.example.com/videos/video.mp4';
 
 // Initialize cURL session
-$ch = curl_init();
+// $ch = curl_init();
 
 // Set cURL options
-curl_setopt($ch, CURLOPT_URL, $api_url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_HEADER, false);
-curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+// curl_setopt($ch, CURLOPT_URL, $api_url);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// curl_setopt($ch, CURLOPT_HEADER, false);
+// curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
-// Execute cURL session
-$data = curl_exec($ch);
+// // Execute cURL session
+// $data = curl_exec($ch);
 
-// Close cURL session
-curl_close($ch);
+// // Close cURL session
+// curl_close($ch);
 
-// Output the video data
-header('Content-type: video/mp4');
-echo $data;
-exit;
+// // Output the video data
+// header('Content-type: video/mp4');
+// echo $data;
+// exit;
 }
 ?>
 
