@@ -1,10 +1,10 @@
 <?php
 require_once "libraries/vendor/autoload.php";
-$account_sid = 'AC16f42580ae3d7630ea8f25818dae8bf0';
-$auth_token = 'fa3a7301b02a9b4d1270040ad65b18a3';
+$account_sid = '';
+$auth_token = '';
 
 
-$twilio_number = "+14094077660";
+$twilio_number = "";
 $client = new Twilio\Rest\Client($account_sid, $auth_token);
 
 // Your Twilio phone number
@@ -27,4 +27,8 @@ try {
     echo "SMS sent successfully!";
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 38b34c1eafc42c69141dc5071711358323325dd0
