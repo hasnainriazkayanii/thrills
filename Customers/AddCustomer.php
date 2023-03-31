@@ -35,7 +35,7 @@ $result19 = "(" . $result16 . ") " . $result17 . "-" . $result18;
 
 
 if (isset($_POST['customer'])) {
-  echo '<pre>',print_r($_POST);exit;
+  // echo '<pre>',print_r($_POST);exit;
   //$id=$_GET['id'];
   
   
