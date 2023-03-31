@@ -4,7 +4,7 @@ $account_sid = '';
 $auth_token = '';
 
 
-$twilio_number = "+14094077660";
+$twilio_number = "";
 $client = new Twilio\Rest\Client($account_sid, $auth_token);
 
 // Your Twilio phone number
