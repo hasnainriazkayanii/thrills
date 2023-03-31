@@ -85,7 +85,11 @@ else{
 //var_dump($customer_update);
 
     mysqli_query($db,$customer_update);
+    $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
 
+    VALUES ('Ticket Type','$id','Updated')";
+  
+    $result = mysqli_query($db,$timestamp_insert);
     header( "Location: TicketsDetails.php?status=".$aStatus );
 
 

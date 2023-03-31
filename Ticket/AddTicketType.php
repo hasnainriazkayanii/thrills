@@ -50,6 +50,12 @@ if(isset($_POST['submittickettype']))
             VALUES ('$ticketType','$numberofdays','$adultprice','$childprice','$ticketname','$active','$create_date', $theme_park_id,'$ticket_attachment_DBpath','$addOn')";
 
     $result = mysqli_query($db,$park_insert);
+    $id  = mysqli_insert_id($db);
+    if($id){
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+        VALUES ('Ticket Type','$id','Created')";
+        $result = mysqli_query($db,$timestamp_insert);
+    }
 
     header( "Location: TicketsDetails.php" );
 

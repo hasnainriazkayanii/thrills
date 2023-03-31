@@ -22,6 +22,13 @@ if(isset($_POST['sub'])){
 
      if($count == 1) {
 
+      $timestamp_insert = "INSERT INTO timestamps (type,object_id)
+
+      VALUES ('Login','$id')";
+
+      $result = mysqli_query($db,$timestamp_insert);
+
+
       $_SESSION['id'] = 1;
       $_SESSION['user_id'] = $id;
       

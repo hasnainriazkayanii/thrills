@@ -35,7 +35,7 @@ $result19 = "(" . $result16 . ") " . $result17 . "-" . $result18;
 
 
 if (isset($_POST['customer'])) {
-
+  echo '<pre>',print_r($_POST);exit;
   //$id=$_GET['id'];
   
   
@@ -96,6 +96,11 @@ if (isset($_POST['customer'])) {
                            WHERE id='$id'";
 
   mysqli_query($db, $customer_update);
+  $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+
+  VALUES ('Customer','$id','Updated')";
+
+  $result = mysqli_query($db,$timestamp_insert);
 
 //   header("Location: ../Orders/Addorders.php?id=$id");
   header("Location: ../Customers/CustomersDetails.php");
@@ -711,6 +716,14 @@ else{
       $result = mysqli_query($db,$customer_insert);
 
        $id= mysqli_insert_id($db); 
+       if($id){
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+
+        VALUES ('Customer','$id','Created')";
+      
+        $result = mysqli_query($db,$timestamp_insert);
+      }
+
 
       header( "Location: ../Orders/Addorders.php?id=$id" );
 

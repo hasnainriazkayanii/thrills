@@ -130,7 +130,9 @@ include('../Config/Connection.php');
 
                          if($result ){
 
-                       
+                          $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+                          VALUES ('Ticket','$id','Updated')";
+                          $result = mysqli_query($db,$timestamp_insert);
 
                        
 

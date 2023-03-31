@@ -83,6 +83,14 @@ if (isset($_POST['submitticket'])) {
               VALUES ('$name_on_ticket','$ticketpass','$type', '$gender','$purchase_place','$price','$ticketshowid','$expire_date','$node','$broker','$batchnumber','$set','$entitlement','$trans_no','$print_date','$active', $theme_park_parent_id)";
 
       $result = mysqli_query($db, $ticket_insert);
+      $id  = mysqli_insert_id($db);
+      if($id){
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+
+        VALUES ('Ticket','$id','Created')";
+      
+        $result = mysqli_query($db,$timestamp_insert);
+      }
 
       if ($result == 'true') {
 

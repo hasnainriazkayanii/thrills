@@ -14,6 +14,13 @@
    $park_insert = "INSERT INTO theme_parks (name)
     VALUES ('$park_name')";
    if( $result = mysqli_query($db,$park_insert));
+    $id  = mysqli_insert_id($db);
+    if($id){
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+        VALUES ('Park','$id','Created')";
+        $result = mysqli_query($db,$timestamp_insert);
+    }
+
     header( "Location: ParkDetails.php" );
     }
     

@@ -182,15 +182,15 @@
                     <td><?=($row['adctive'])=='True'?'Active':'Inactive'?></td>
 
                   <?php if($status=='1'){  
-                    if($Astatus=='True')
+                    if($row["adctive"]=='True')
                     {
-                      $Astatus='Active';
+                      $Acstatus='Active';
                     }
                     else{
-                      $Astatus='InActive';
+                      $Acstatus='InActive';
                     }
                     ?>
-                    <td><a href="UpdateTicketType.php?id=<?php echo $row["id"].'&status='.$Astatus; ?>" class='btn btn-info' role='button'> Edit</a></td>
+                    <td><a href="UpdateTicketType.php?id=<?php echo $row["id"].'&status='.$Acstatus; ?>" class='btn btn-info' role='button'> Edit</a></td>
 
                     <td><a  onClick="return confirm('Are you sure you want to delete?')" href=TicketDelete.php?id=<?php echo $row["id"];?> class='btn btn-info' role='button'> Delete</a></td>
 

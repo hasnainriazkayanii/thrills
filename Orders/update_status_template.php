@@ -16,7 +16,11 @@ else{
 // update Order status
 $sql = "UPDATE `order` SET `status`='$update_status' WHERE id='$order_id'";
 mysqli_query($db,$sql);
+$timestamp_insert = "INSERT INTO timestamps (type,object_id,order_id,action)
 
+    VALUES ('Order Status','$update_status',$order_id,'Updated')";
+  
+    $result = mysqli_query($db,$timestamp_insert);
 
 
 // loging out user if status is route to park
@@ -30,6 +34,7 @@ if($status == 4 || $status == 1 || $status == 2 || $status == 6 ){
     }
     $update_guest = "update guest set isdisabled = $disabled where order_id = $order_id";
     mysqli_query($db,$update_guest);
+    
 }
 
 
