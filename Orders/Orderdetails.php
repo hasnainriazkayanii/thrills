@@ -751,7 +751,12 @@ foreach ($upcoming_orders_unsorted as $order) {
                                 <td class='td-1 w-25' style="min-width: 315px;position:relative;height: 138px;vertical-align: middle;">
                                     <div>
                                         <div class="text-center">
+                                            <?php if($_SESSION['level'] == 9){ ?>
+                                                 <p style=" font-size: 22px;margin-bottom: 0px;"><a href="order_activity_report.php?order_id=<?=$value['order_id']?>"><?= $value['first_name']." ".$value['Last_name'] ?></a></p>
+                                          <?php  }
+                                            else{ ?>
                                             <p style=" font-size: 22px;margin-bottom: 0px;"><?= $value['first_name']." ".$value['Last_name'] ?></p>
+                                            <?php } ?>
                                             <?php
                                                 if($_SESSION['level']>=2){
                                             ?>
@@ -1413,8 +1418,8 @@ console.log(expense_type);
                         deposit += parseInt(payment_amount);
                         payment_amount = "$"+payment_amount;
                     }
-
-                    payment_container += "<div>"+payment_amount+" "+payment_method+" "+payment_type+" "+payment_date+" "+user_name+" "+refund_reason+"</div>";
+                    var smslink =`<a href="text_payment_details.php?added_order=true&order_id=${value.orderID}&account_id=${value.id}">Send Receipt</a>`;
+                    payment_container += "<div>"+payment_amount+" "+payment_method+" "+payment_type+" "+payment_date+" "+user_name+" "+refund_reason+" "+smslink+"</div>";
 
                 });
                 if(payment_container != ""){

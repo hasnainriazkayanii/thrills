@@ -138,7 +138,7 @@ include('../Config/Connection.php');
 
                       echo "<script>alert('Updated succesfully');
 
-                      document.location.href='$base_url/History/AddHistory.php?id=$id';</script>";
+                      document.location.href='$base_url/Ticket/DetailsTicket.php?active=0';</script>";
 
                         }
 

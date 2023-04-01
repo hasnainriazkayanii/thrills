@@ -154,12 +154,13 @@ if (isset($_POST['userpay'])) {
     $account = "INSERT INTO accounting(`sales_commission_amount`,`orderID`,`customerID`, `typeOfPayment`,  `paymentMethod`,`paymentAmount`, `sendText`,`personCollecting`,`refund_reason`) VALUES ('$commission_deduction','$orderID', '$customerID', '$typeOfPayment', '$paymentMethod','$paymentAmount', '$sendText','$session_user_id','$refund_reason')";
 
     $result = mysqli_query($db, $account);
-
+    $id  = mysqli_insert_id($db);
+    // echo $id;exit;
 //    var_dump($account);
 
     if(isset($_POST['sendText']) && $_POST['sendText'] == '1') {
 
-        header("Location: text_payment_details.php?added_order=true&order_id=" . $orderID);
+        header("Location: text_payment_details.php?added_order=true&order_id=" . $orderID.'&account_id='.$id);
 
     } else {
 

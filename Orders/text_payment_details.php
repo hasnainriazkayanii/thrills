@@ -37,13 +37,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     header( "Location: Orderdetails.php?active=0&sucess=0" );
 }
 
-if (! isset($_GET['order_id']))
+if (! isset($_GET['order_id']) && !isset($_GET['account_id']))
 {
 	http_response_code(404);
 	die();
 }
 
 $order_id = $_GET['order_id'];
+$account_id = $_GET['account_id'];
 
 $sql = "SELECT * FROM `order` WHERE `order_id`='$order_id'";
 $result = mysqli_query($db, $sql);
@@ -53,7 +54,7 @@ $sql = "SELECT * FROM `theme_parks` WHERE `id`={$order['theme_park_id']}";
 $result = mysqli_query($db, $sql);
 $theme_park = mysqli_fetch_assoc($result);
 
-$sql = "SELECT * FROM `accounting` WHERE `orderID`='$order_id'";
+$sql = "SELECT * FROM `accounting` WHERE `id`='$account_id'";
 $result = mysqli_query($db, $sql);
 $account = mysqli_fetch_assoc($result);
 

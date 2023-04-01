@@ -56,7 +56,7 @@ include('../includes/header.php');
                     <tr>
                       <th>Name</th>
                       <th>Email</th>
-                      <th>Password</th>
+                      <th>Activity</th>
                       <th>Mobile Number</th>
                       <th>Role</th>
                       <th>Access Level</th>
@@ -78,7 +78,7 @@ while($row = mysqli_fetch_assoc($result_page)) {;?>
 <tr>
 <td> <?php echo  $row["user_name"]?></td>
 <td><?php echo  $row ["email"] ?></td>
-<td> ********</td>
+<td><button id="btnActivity" class="btn btn-sm btn-danger btnActivity" data-toggle="modal" data-target="#activityModal" data-id="<?=$row['id']?>">View</button></td>
 <td><?php echo  $row ["mob_no"]?> </td>
 
 <?php if($row["status"]=='1'){ ?>
@@ -175,8 +175,42 @@ while($row = mysqli_fetch_assoc($result_page)) {;?>
       </div>
     </div>
 
-  
+    <div class="modal fade" id="activityModal">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Login Activity</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body" id="activityContent"></div>
+          <div class="modal-footer">
+                       
+                    </div>
+        </div>
+      </div>
+    </div>
 
+  
+  <script>
+      $('.btnActivity').click(function(){
+        
+        var id = $(this).attr('data-id');
+
+        $.ajax({
+            url: "../Role/get_login_activity.php?id="+id,
+            success:function (response) {
+                $("#activityContent").html(response);
+                $("#activityModal").modal('toggle');
+            },
+            type: "GET"
+        })
+        // calculate_due();
+
+
+    })
+  </script>
   </body>
 
 </html>

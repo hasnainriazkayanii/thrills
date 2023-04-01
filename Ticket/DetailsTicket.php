@@ -419,7 +419,7 @@ $targetpage = "https://dbaseconnect.com/cheapthrills/Ticket/DetailsTicket.php";
 
                         $originalDate = $row["expire_date"];
 
-                        $newDate = date("Y/m/d", strtotime($originalDate));
+                        $newDate = date("m/d/Y", strtotime($originalDate));
 
                         $current_date = date("Y/m/d");
 

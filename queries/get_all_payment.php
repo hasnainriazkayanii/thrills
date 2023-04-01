@@ -6,7 +6,7 @@ $query = "SELECT a.*,u.user_name from accounting a LEFT JOIN login_user u on u.i
 $result = mysqli_query($db,$query);
 while($row = mysqli_fetch_assoc($result)){
     if ($row['dateOfPayment'] != "") {
-        $payment_date = date('m/d/y', strtotime($row['dateOfPayment']));
+        $payment_date = date('m/d/y h:i A', strtotime($row['dateOfPayment']));
         $row['dateOfPayment'] = $payment_date;
     }
 
