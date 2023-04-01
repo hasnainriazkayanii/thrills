@@ -52,8 +52,9 @@ if(isset($_POST['submittickettype']))
     $result = mysqli_query($db,$park_insert);
     $id  = mysqli_insert_id($db);
     if($id){
-        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
-        VALUES ('Ticket Type','$id','Created')";
+        $action_by = $_SESSION['user_id'];
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
+        VALUES ('Ticket Type','$id','Created','$action_by')";
         $result = mysqli_query($db,$timestamp_insert);
     }
 

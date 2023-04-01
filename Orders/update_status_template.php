@@ -16,11 +16,10 @@ else{
 // update Order status
 $sql = "UPDATE `order` SET `status`='$update_status' WHERE id='$order_id'";
 mysqli_query($db,$sql);
-$timestamp_insert = "INSERT INTO timestamps (type,object_id,order_id,action)
-
-    VALUES ('Order Status','$update_status',$order_id,'Updated')";
-  
-    $result = mysqli_query($db,$timestamp_insert);
+$action_by = $_SESSION['user_id'];
+$timestamp_insert = "INSERT INTO timestamps (type,object_id,order_id,action,action_by)
+VALUES ('Order Status','$update_status',$order_id,'Updated','$action_by')";
+$result = mysqli_query($db,$timestamp_insert);
 
 
 // loging out user if status is route to park

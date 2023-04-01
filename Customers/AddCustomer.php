@@ -96,9 +96,10 @@ if (isset($_POST['customer'])) {
                            WHERE id='$id'";
 
   mysqli_query($db, $customer_update);
-  $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+  $action_by = $_SESSION['user_id'];
+  $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
 
-  VALUES ('Customer','$id','Updated')";
+  VALUES ('Customer','$id','Updated','$action_by')";
 
   $result = mysqli_query($db,$timestamp_insert);
 
@@ -717,10 +718,9 @@ else{
 
        $id= mysqli_insert_id($db); 
        if($id){
-        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
-
-        VALUES ('Customer','$id','Created')";
-      
+        $action_by = $_SESSION['user_id'];
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
+        VALUES ('Customer','$id','Created','$action_by')";
         $result = mysqli_query($db,$timestamp_insert);
       }
 

@@ -630,7 +630,6 @@ foreach ($upcoming_orders_unsorted as $order) {
                                         <div class="d-flex align-items-center justify-content-center">
                                             <div style="flex:1">
                                                 <img src="<?php echo $ticket_type_image ?>" alt="" style="width: 67%;margin: 0 auto;display: flex;">
-                                                <br>
                                                 <?php if(isset($value['ticket_image']) && !empty($value['ticket_image'])){ 
                                                     $theImage = "../".$value['ticket_image'];?>
                                                     <img src="<?php echo  $theImage ?>" alt="" style="width: 67%;margin: 0 auto;display: flex;">
@@ -752,7 +751,7 @@ foreach ($upcoming_orders_unsorted as $order) {
                                     <div>
                                         <div class="text-center">
                                             <?php if($_SESSION['level'] == 9){ ?>
-                                                 <p style=" font-size: 22px;margin-bottom: 0px;"><a href="order_activity_report.php?order_id=<?=$value['order_id']?>"><?= $value['first_name']." ".$value['Last_name'] ?></a></p>
+                                                 <p style=" font-size: 22px;margin-bottom: 0px;"><a href="order_activity_report.php?order_id=<?=$value['order_id']?>" target="_blank"><?= $value['first_name']." ".$value['Last_name'] ?></a></p>
                                           <?php  }
                                             else{ ?>
                                             <p style=" font-size: 22px;margin-bottom: 0px;"><?= $value['first_name']." ".$value['Last_name'] ?></p>

@@ -129,9 +129,9 @@ include('../Config/Connection.php');
                        $result2 = mysqli_query($db,$gust_update);
 
                          if($result ){
-
-                          $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
-                          VALUES ('Ticket','$id','Updated')";
+                          $action_by = $_SESSION['user_id'];
+                          $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
+                          VALUES ('Ticket','$id','Updated','$action_by')";
                           $result = mysqli_query($db,$timestamp_insert);
 
                        

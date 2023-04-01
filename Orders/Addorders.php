@@ -155,9 +155,6 @@ if (isset($_POST['userpay'])) {
 
     $result = mysqli_query($db, $account);
     $id  = mysqli_insert_id($db);
-    // echo $id;exit;
-//    var_dump($account);
-
     if(isset($_POST['sendText']) && $_POST['sendText'] == '1') {
 
         header("Location: text_payment_details.php?added_order=true&order_id=" . $orderID.'&account_id='.$id);
@@ -175,9 +172,6 @@ if (isset($_POST['userpay'])) {
 
 
 if (isset($_POST['orderadd'])) {
-
-    // echo '<pre>',print_r($_POST);exit;
-
     $gateway = $_POST['gateway'];
 
 
@@ -264,8 +258,6 @@ if (isset($_POST['orderadd'])) {
 
     $ticket_type = $ticket_type_post[0];
 
-    // echo $ticket_type_post.'<br>';
-    // echo $ticket_type_id;exit;
     $addOn = $_POST['AddOn'];
 
 
@@ -449,13 +441,12 @@ if (isset($_POST['orderadd'])) {
 
     $new_order_id = mysqli_insert_id($db);
     if($new_order_id){
-        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
-
-        VALUES ('Order','$new_order_id','Created')";
+        $action_by = $_SESSION['user_id'];
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
+        VALUES ('Order','$new_order_id','Created','$action_by')";
+        $result = mysqli_query($db,$timestamp_insert);
     }
   
-    $result = mysqli_query($db,$timestamp_insert);
-    // echo $order_insert;exit;
 
 
 
@@ -639,7 +630,6 @@ if (isset($_POST['updateorder'])) {
 
     $theme_park_id = $_POST['theme_park_id'];
 
-//echo '----'. $_POST['is_hide']; echo '+++++'.$_POST['hideorder']; exit();
 
     $hideorder = $_POST['is_hide'] == true ? 1 : 0;
 
@@ -722,8 +712,7 @@ if (isset($_POST['updateorder'])) {
 //    $delete_guests = "DELETE from guest where order_id  = $id";
 
 //    mysqli_query($db,$delete_guests);
-
-
+    
 
     $order_insert = "UPDATE `order` SET
 
@@ -810,10 +799,10 @@ if (isset($_POST['updateorder'])) {
 //var_dump($order_insert);
 
     $result = mysqli_query($db, $order_insert);
+    $action_by = $_SESSION['user_id'];
+    $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
 
-    $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
-
-    VALUES ('Order','$id','Updated')";
+    VALUES ('Order','$id','Updated','$action_by')";
   
     $result = mysqli_query($db,$timestamp_insert);
 
@@ -823,7 +812,10 @@ if (isset($_POST['updateorder'])) {
 
 
 
-
+    if($kids!=$user['kids'] || $adults!=$user['adults']){
+        $deleteQuery ="DELETE from `guest` where order_id = $id";
+        $del = mysqli_query($db, $deleteQuery);
+    }
 
 //    if ($kids > $user['kids']) {
 
@@ -1049,9 +1041,10 @@ if (isset($_POST['addentry'])) {
 
     $new_order_id = mysqli_insert_id($db);
     if($new_order_id){
-        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
+        $action_by = $_SESSION['user_id'];
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
 
-        VALUES ('Order','$new_order_id','Created')";
+        VALUES ('Order','$new_order_id','Created','$action_by')";
     
         $result = mysqli_query($db,$timestamp_insert);
     }

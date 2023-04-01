@@ -22,7 +22,7 @@ $query = "SELECT * from timestamps where type='Login' and object_id=$user_id";
 $result = mysqli_query($db,$query);
 if (mysqli_num_rows($result) > 0) {
 while($row = mysqli_fetch_assoc($result)){
-    $table .='<tr><td>'.date('m-d-Y h:i A',strtotime($row['date_time'])).'</td></tr>';
+    $table .='<tr><td>'.date('m/d/Y h:i A',strtotime('+1 hour',strtotime($row['date_time']))).'</td></tr>';
 }
 }
 else{

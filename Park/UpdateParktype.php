@@ -28,8 +28,9 @@ if(isset($_POST['customer']))
        theme_park_parent_id='$theme_park_parent_id'
        WHERE id='$id'";
         mysqli_query($db,$record_update); 
-        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action)
-        VALUES ('Park','$id','Updated')";
+        $action_by = $_SESSION['user_id'];
+        $timestamp_insert = "INSERT INTO timestamps (type,object_id,action,action_by)
+        VALUES ('Park','$id','Updated','$action_by')";
         $result = mysqli_query($db,$timestamp_insert);
     header( "Location: ParkDetails.php" );
 

@@ -3,8 +3,6 @@
 include('../Config/Connection.php');
 
 session_start();
-
-
 $login_check = $_SESSION['id'];
 
 $level = $_SESSION['level'];
@@ -40,28 +38,50 @@ if(isset($_GET['order_id']) && !empty($_GET['order_id'])){
     INNER JOIN `status` ON status.Status_Id=order.status 
     INNER JOIN `customer` ON order.customer_id=customer.id 
     LEFT JOIN `accounting` ON order.order_id=accounting.orderID 
-    Left JOIN guest as g ON order.id= g.order_id 
-    LEFT JOIN partners pa ON pa.id = order.sales_personID  
+    Left JOIN `guest` as g ON order.id= g.order_id 
+    LEFT JOIN `partners` pa ON pa.id = order.sales_personID  
     LEFT JOIN `tickettypes` ON tickettypes.id = order.ticket_type_id
     WHERE order.id=$order_id  group by order.order_id";
     $result = mysqli_query($db,$sql);
     if (mysqli_num_rows($result) > 0) {
         $data['order'] = mysqli_fetch_assoc($result);
-        $CusomerActivityQuery = " SELECT * from timestamps where type='Customer' and object_id=".$data['order']['customer_code'];
+        $CusomerActivityQuery = " SELECT timestamps.* ,
+         login_user.user_name
+        from timestamps
+        LEFT JOIN `login_user` ON login_user.id  = timestamps.action_by 
+        where type='Customer' 
+        and object_id=".$data['order']['customer_code'].
+        " ORDER BY date_time ASC";
         $customerActivityResult = mysqli_query($db,$CusomerActivityQuery);
         if (mysqli_num_rows($customerActivityResult) > 0) {
             $data['order']['customer_activity'] =  mysqli_fetch_all($customerActivityResult, MYSQLI_ASSOC);
         }
-        $OrderActivityQuery = " SELECT * from timestamps where type='Order' and object_id=".$order_id;
+        $OrderActivityQuery = " SELECT timestamps.*, 
+        login_user.user_name 
+        from timestamps 
+        LEFT JOIN `login_user` ON login_user.id  = timestamps.action_by 
+        where timestamps.type='Order'
+        and timestamps.object_id=".$order_id.
+        " ORDER BY timestamps.date_time ASC";
+        //  echo $OrderActivityQuery;exit;
         $orderActivityResult = mysqli_query($db,$OrderActivityQuery);
         if (mysqli_num_rows($orderActivityResult) > 0) {
             $data['order']['order_activity'] = mysqli_fetch_all($orderActivityResult, MYSQLI_ASSOC);
         }
-        $StatusActivityQuery = "SELECT status.status_name, timestamps.date_time from timestamps JOIN status ON status.Status_ID  = timestamps.object_id where type='Order Status' and order_id=".$order_id;
+        $StatusActivityQuery = "SELECT status.status_name, 
+        timestamps.date_time,
+        timestamps.object_id,
+        login_user.user_name
+        from `timestamps`
+        JOIN `status` ON status.Status_ID  = timestamps.object_id 
+        LEFT JOIN `login_user` ON login_user.id  = timestamps.action_by 
+        JOIN `order` ON order.id  = timestamps.order_id 
+        where timestamps.type='Order Status' and timestamps.order_id=".$order_id." ORDER BY date_time ASC";
         $statusActivityResult = mysqli_query($db,$StatusActivityQuery);
         if (mysqli_num_rows($statusActivityResult) > 0) {
             $data['order']['status_activity'] = mysqli_fetch_all($statusActivityResult, MYSQLI_ASSOC);
         }
+        // echo '<pre>',print_r($data);exit;
     }
 
     
@@ -102,10 +122,12 @@ else{
                     </div>
                     <div class="card-body">
                         <div class="float-right"> <?php $image  = "../".$data['order']['image']; ?>
-                <img src="<?=$image?>" alt="" style="width: 10)%;margin: 0 auto;display: flex;"></div>
+                <img src="<?=$image?>" alt="" style="width: 170px;margin: 0 auto;display: flex;"></div>
                         <p>Order No: <b><?=$data['order']['orderID']?></b></p>
-                        <p>Date Time:  <?=$data['order']['date_of_visit'].' '.$data['order']['time']?></p>
-                        <p>Adults: <?=$data['order']['Phone_number']?></p>
+                        <p>Date Time: 
+                        <?=date('m/d/Y',strtotime($data['order']['date_of_visit'])).' '.$data['order']['time']?></p>
+                        <p>Adults: <?=$data['order']['adults']?></p>
+                        <p>Kids: <?=$data['order']['kids']?></p>
                         <p>Total Amount: <?=$data['order']['total']?></p>
                         <p>Status: <?=$data['order']['status_name']?></p>
                     </div>
@@ -152,8 +174,13 @@ else{
                 <h5>Customer Activity</h5>
                 <ul class="list-group">
                 <?php if(isset($data['order']['customer_activity'])) { 
-                    foreach($data['order']['customer_activity'] as $ca){?>
-                        <li class="list-group-item">Customer <?=$ca['action']?> - <?=date('m-d-Y h:i A',strtotime($ca['date_time']))?></li>
+                    foreach($data['order']['customer_activity'] as $ca){
+                        $datetime = new DateTime($ca['date_time']);
+                        $formatted_time = $datetime->format('m/d/Y h:i A');
+                        $formatted_time = date('m/d/Y h:i A',strtotime('+1 hour',strtotime($formatted_time)));
+                       
+                        ?>
+                        <li class="list-group-item">Customer <?=$ca['action']?> - <?=$formatted_time?>  - <?=$ca['user_name']?></li>
                     <?php } } else{?>
                         <li class="list-group-item">No Activity Track</li>
                 <?php } ?>
@@ -165,8 +192,11 @@ else{
                 <h5>Order Activity</h5>
                 <ul class="list-group">
                 <?php if(isset($data['order']['order_activity'])) { 
-                    foreach($data['order']['order_activity'] as $ca){?>
-                        <li class="list-group-item">Order <?=$ca['action']?> - <?=date('m-d-Y h:i A',strtotime($ca['date_time']))?></li>
+                    foreach($data['order']['order_activity'] as $ca){
+                        $datetime = new DateTime($ca['date_time']);
+                        $formatted_time = $datetime->format('m/d/Y h:i A');
+                        $formatted_time = date('m/d/Y h:i A',strtotime('+1 hour',strtotime($formatted_time)));?>
+                        <li class="list-group-item">Order <?=$ca['action']?> - <?=$formatted_time?>  - <?=$ca['user_name']?></li>
                     <?php } } else{?>
                         <li class="list-group-item">No Activity Track</li>
                 <?php } ?>
@@ -178,8 +208,39 @@ else{
                 <h5>Order Status</h5>
                 <ul class="list-group">
                 <?php if(isset($data['order']['status_activity'])) { 
-                    foreach($data['order']['status_activity'] as $ca){?>
-                        <li class="list-group-item">Order Status Changed - to <?=$ca['status_name']?> - <?=date('m-d-Y h:i A',strtotime($ca['date_time']))?></li>
+                    foreach($data['order']['status_activity'] as $ca){
+                        $datetime = new DateTime($ca['date_time']);
+                        $formatted_time = $datetime->format('m/d/Y h:i A');
+                        $formatted_time = date('m/d/Y h:i A',strtotime('+1 hour',strtotime($formatted_time)));
+                        $statusArray = array(2,4,6,7,15);
+                        $statusArrayP1 = array(2,4,6);
+                        $statusArrayP2 = array(7,15);
+                        $parkName ='';
+                        if(in_array($ca['object_id'],$statusArray)){
+                            if($data['order']['ticket_type']=='ptp'){
+                                if(in_array($ca['object_id'],$statusArrayP1)){
+                                    $ticket_parts = explode("&", $data['order']['ticket_name']);
+                                    if(isset($ticket_parts[0])){
+                                        $parkName =' - '.$ticket_parts[0];
+                                    }
+                                }
+                                else{
+                                    $ticket_parts = explode("&", $data['order']['ticket_name']);
+                                    if(isset($ticket_parts[1])){
+                                        $Park2Name = trim($ticket_parts[1]);
+                                        $exploded = explode(' ',$Park2Name);
+                                        if(isset($exploded[0])){
+                                            $parkName = ' - '.$exploded[0];
+                                        }
+                                    }
+                                }
+                            }
+                            else{
+                                $parkName = ' - '.$data['order']['park_name'];
+                            }
+                        }
+                        ?>
+                        <li class="list-group-item">Order Status Changed to - <?=$ca['status_name']?> <?=$parkName?> - <?=$formatted_time?> - <?=$ca['user_name']?></li>
                     <?php } } else{?>
                         <li class="list-group-item">No Activity Track</li>
                 <?php } ?>
