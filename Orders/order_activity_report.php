@@ -123,7 +123,7 @@ else{
                     <div class="card-body">
                         <div class="float-right"> <?php $image  = "../".$data['order']['image']; ?>
                 <img src="<?=$image?>" alt="" style="width: 170px;margin: 0 auto;display: flex;"></div>
-                        <p>Order No: <b><?=$data['order']['orderID']?></b></p>
+                        <p>Order No: <b><?=$data['order']['order_code']?></b></p>
                         <p>Date Time: 
                         <?=date('m/d/Y',strtotime($data['order']['date_of_visit'])).' '.$data['order']['time']?></p>
                         <p>Adults: <?=$data['order']['adults']?></p>

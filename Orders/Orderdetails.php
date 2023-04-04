@@ -1483,7 +1483,7 @@ console.log(expense_type);
                 console.log(res);
                 //console.log(order, " marked as ", status);
                 // location.reload();
-                window.location.reload(true);
+                // window.location.reload(true);
 
             }
         });

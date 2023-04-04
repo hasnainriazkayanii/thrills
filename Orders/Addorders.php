@@ -1669,7 +1669,7 @@ include('../includes/header.php');
 
                             <select class="form-control time" name="time" required>
 
-                                <option>Please select a value</option>
+                                <option value="">Please select a value</option>
 
                                 <?php 
 

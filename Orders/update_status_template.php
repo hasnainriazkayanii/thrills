@@ -80,11 +80,12 @@ else{
 $order_time = $order['time'];
 
 $park_code = preg_replace('/[^a-zA-Z]/', '', $order['order_id']);
-//First message At the Park
 $text_msg1 = "SELECT * FROM `text_messages` WHERE theme_park_id='$theme_park_id' and status = $status limit 1"; // previously it was 2
-//        var_dump($text_msg1);
 $msg_row = mysqli_fetch_assoc(mysqli_query($db,$text_msg1));
 $msg_1 =  $msg_row['message'];
+
+
+$admin_message = $msg_row['admin_message'];
 
 $msg_1 = str_replace('{%fname%}',$first_name,$msg_1);
 $msg_1 = str_replace('{%lname%}',$last_name,$msg_1);
@@ -97,6 +98,19 @@ $msg_1 = str_replace('{%ttype%}',$ticket_type,$msg_1);
 $msg_1 = str_replace('{%onumber%}',$order_id,$msg_1);
 $msg_1 = str_replace('{%datevisit%}',$date_of_visit,$msg_1);
 $msg_1 = str_replace('{%otime%}',$order_time,$msg_1);
+
+
+$admin_message = str_replace('{%fname%}',$first_name,$admin_message);
+$admin_message = str_replace('{%lname%}',$last_name,$admin_message);
+$admin_message = str_replace('{%fullname%}',$customer,$admin_message);
+$admin_message = str_replace('{%themepname%}',$theme_park_name,$admin_message);
+$admin_message = str_replace('{%adults%}',$adults,$admin_message);
+$admin_message = str_replace('{%kids%}',$kids,$admin_message);
+$admin_message = str_replace('{%ototal%}',$total,$admin_message);
+$admin_message = str_replace('{%ttype%}',$ticket_type,$admin_message);
+$admin_message = str_replace('{%onumber%}',$order_id,$admin_message);
+$admin_message = str_replace('{%datevisit%}',$date_of_visit,$admin_message);
+$admin_message = str_replace('{%otime%}',$order_time,$admin_message);
 
 //echo $msg_1 . " <--> ";
 
@@ -123,52 +137,57 @@ https://dbaseconnect.com/cheapthrills/$message_attachment";
 
 
 // sending message to admin based on the status
-$admin_id = "";
-$admin_message = "";
-if ($status == 4){
-    $admin_id = "2";
-    $admin_message = "$customer is on the way to the park";
-}
-if ($status == 2){
-    $admin_id = "1";
-    $admin_message = "$customer has entered the park";
-}
+// $admin_id = "";
+// $admin_message = "";
+// if ($status == 4){
+//     $admin_id = "2";
+//     $admin_message = "$customer is on the way to the park";
+// }
+// if ($status == 2){
+//     $admin_id = "1";
+//     $admin_message = "$customer has entered the park";
+// }
 
 
-if ($status == 11){
-    $admin_id = "1,2";
-    $admin_message = "$customer order for $theme_park_name $visit_date has been cancelled";
-}
-
-
+// if ($status == 11){
+//     $admin_id = "1,2";
+//     $admin_message = "$customer order for $theme_park_name $visit_date has been cancelled";
+// }
 if ($is_hide != "1"){
-    if ($admin_id != "") {
-        $query_admin_number = "SELECT * from settings where id in ($admin_id)";
-        $admin_number = mysqli_fetch_assoc(mysqli_query($db, $query_admin_number))['value'];
-
-
-        try {
-            $resp_1 = $client->messages->create(
-                $admin_number,
-                array(
-                    'from' => $twilio_number,
-                    'body' => $admin_message
-                )
-            );
-
-
-        } catch (Exception $e) { // var_dump($e);
+    if ($msg_row['send_to'] != "") {
+        $jsondecoded = json_decode($msg_row['send_to']);
+        $placeholders = implode(',', $jsondecoded);
+        $query_admin_number = "SELECT * from `login_user` where id in ($placeholders)";
+        $customerActivityResult = mysqli_query($db,$query_admin_number);
+        if (mysqli_num_rows($customerActivityResult) > 0) {
+            $adminData =  mysqli_fetch_all($customerActivityResult, MYSQLI_ASSOC);
+            foreach($adminData as $admin){
+                try {
+                    $resp_1 = $client->messages->create(
+                        $admin['mob_no'],
+                        array(
+                            'from' => $twilio_number,
+                            'body' => $admin_message
+                        )
+                    );
+        
+        
+                } catch (Exception $e) { // var_dump($e);
+                }
+            }
         }
+
+
     }
 
 
 }
 
-
+$smsSent = array();
 //        var_dump($guests_query);
 while($guest = mysqli_fetch_assoc($guests)){
 
-//echo $guest['country_code']. $guest['guest_mobile'] . " <--> ";
+// echo $guest['country_code']. $guest['guest_mobile'] . " <--> ";
 
     // if($status == 1){
 
@@ -206,24 +225,22 @@ while($guest = mysqli_fetch_assoc($guests)){
 
     // }
     //send text
-
-    try
-    {
-        $resp = $client->messages->create(
-            $guest['country_code']. $guest['guest_mobile'],
-            array(
-                'from' => $twilio_number,
-                'body' => htmlspecialchars_decode($msg_1)
-            )
-        );
-
-
-    }
-    catch (Exception $e) {
-//        var_dump($e);
+    if(!in_array($guest['country_code']. $guest['guest_mobile'],$smsSent)){
+        try
+        {
+            $smsSent[] = $guest['country_code']. $guest['guest_mobile'];
+            $resp = $client->messages->create(
+                $guest['country_code']. $guest['guest_mobile'],
+                array(
+                    'from' => $twilio_number,
+                    'body' => htmlspecialchars_decode($msg_1)
+                )
+            );
+        }
+        catch (Exception $e) {
+    //        var_dump($e);
+        }
     }
 }
-
-
 
 ?>

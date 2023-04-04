@@ -59,16 +59,22 @@ if(isset($_REQUEST['mobile']))
     
     
 $Gd=0;
-
+$guestList=[];
+$listAllguestQuery = "SELECT guest_name,guest_mobile FROM guest where  order_id='$order'";
+$guestListResults = mysqli_query($db,$listAllguestQuery);
+if (mysqli_num_rows($guestListResults) > 0) {
+	$guestList =  mysqli_fetch_all($guestListResults, MYSQLI_ASSOC);
+}
 $order = $user_cc['order_id'];
 //$sqlKidCount="SELECT * FROM guest where guest_mobile='$mobile' and login_id='$orderID' and type='kid' and inactive='0'";
-$sqlKidCount="SELECT adults,kids,theme_park_id, date_of_visit FROM `order` where id ='$order'";
+$sqlKidCount="SELECT adults,kids,theme_park_id, ishidden,date_of_visit FROM `order` where id ='$order'";
 $result44=mysqli_query($db,$sqlKidCount);
 $user44=mysqli_fetch_assoc($result44);
 $adults11=$user44['adults'];
 $kids11=$user44['kids'];
 $theme_park_id=$user44['theme_park_id'];
 $dov=$user44['date_of_visit'];
+$ishidden = $user44['ishidden'];
 
 $sqlThemePark = "SELECT theme_park_parent_id , name FROM `theme_parks` where id='$theme_park_id'";
 $resultThemePark = mysqli_query($db, $sqlThemePark);
@@ -304,7 +310,7 @@ if(!$AllTickets)
 	$sql = "UPDATE `guest` SET islogedin=1 WHERE login_id='{$objet['loginId']}' AND guest_mobile='{$objet['mobile']}'";
 	$result = mysqli_query($db, $sql);
 
-	 echo json_encode(array('status'=>200,'message'=>'You have been successfully logged in','adultCount'=>"$TotalAdultCount",'kidCount'=>"$TotalKidCount",'ThemeParkParenId'=>"$ThemeParkParentId",'ThemeParkName'=>"$ThemeParkName",'orderDetails'=>$AllTickets,'dateOfvisit'=>$dov),JSON_PRETTY_PRINT);
+	 echo json_encode(array('status'=>200,'message'=>'You have been successfully logged in','adultCount'=>"$TotalAdultCount",'kidCount'=>"$TotalKidCount",'ThemeParkParenId'=>"$ThemeParkParentId",'ThemeParkName'=>"$ThemeParkName",'orderDetails'=>$AllTickets,'dateOfvisit'=>$dov,'Guests'=>$guestList,'ishidden'=>$ishidden),JSON_PRETTY_PRINT);
 }
   /*  
 }

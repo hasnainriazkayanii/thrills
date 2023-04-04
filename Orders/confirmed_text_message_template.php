@@ -22,46 +22,46 @@ $sql = "SELECT * FROM `theme_parks` WHERE `id`={$order['theme_park_id']}";
 $result = mysqli_query($db, $sql);
 $theme_park = mysqli_fetch_assoc($result);
 
-$message = "Orlando Ticket World Here! \n";
-$message .= "ORDER DETAILS: \n";
+// $message = "Orlando Ticket World Here! \n";
+// $message .= "ORDER DETAILS: \n";
 
-$message .= "$first_name $last_name \n";
+// $message .= "$first_name $last_name \n";
 
 
 if($order['adults']>0 && $order['kids']==0 ){
     if($order['adults']==1){
-        $message .= $order['adults']."Adult \n";
+        // $message .= $order['adults']."Adult \n";
 
     }
     else{
-        $message .= $order['adults']." Adults \n";
+        // $message .= $order['adults']." Adults \n";
     }
 }
 else if($order['adults']==0 && $order['kids']>0 ){
     if($order['kids']==1){
-        $message .= $order['kids']." Child \n";
+        // $message .= $order['kids']." Child \n";
 
     }
     else{
-        $message .= $order['kids']." Child \n";
+        // $message .= $order['kids']." Child \n";
     }
 
 }
 else{
     if($order['kids']==1 && $order['adults']==1){
-        $message .= $order['adults']." Adult/".$order['kids']." Child \n";
+        // $message .= $order['adults']." Adult/".$order['kids']." Child \n";
 
     }
     else if($order['kids']==1 ){
-        $message .= $order['adults']." Adult/".$order['kids']." Child \n";
+        // $message .= $order['adults']." Adult/".$order['kids']." Child \n";
 
     }
     else if($order['adults']==1 ){
-        $message .= $order['adults']." Adult/".$order['kids']." Child \n";
+        // $message .= $order['adults']." Adult/".$order['kids']." Child \n";
 
     }
     else{
-        $message .= $order['adults']." Adult/".$order['kids']." Child \n";
+        // $message .= $order['adults']." Adult/".$order['kids']." Child \n";
     }
 
 }
@@ -72,18 +72,18 @@ if (strpos($var, 'Universal $100') !== false) {
     $result = substr($var2, 0, 10);
 
   //  $message .= $theme_park['name']." (".$main_ticket_type."), \n";
-    $message .= "$main_ticket_type \n";
-    $message .= date("D M d",strtotime($order['date_of_visit'])).", ".date("g:i A",strtotime($order['time']))." \n";
+    // $message .= "$main_ticket_type \n";
+    // $message .= date("D M d",strtotime($order['date_of_visit'])).", ".date("g:i A",strtotime($order['time']))." \n";
 
-    $message .= "Your Total is $".$order['total']." CASH ONLY \n";
-    $message .= "Exact Amount Please. We Do Not Have Change. \n";
+    // $message .= "Your Total is $".$order['total']." CASH ONLY \n";
+    // $message .= "Exact Amount Please. We Do Not Have Change. \n";
 
     $park_code = preg_replace('/[^a-zA-Z]/', '', $order_id);
 
     $get_msg="SELECT message from text_messages where theme_park_id='{$order['theme_park_id']}' and status = 0";
     $res_msg = mysqli_query($db, $get_msg);
     $final_message = mysqli_fetch_assoc($res_msg);
-    $message .=$final_message['message'];
+    $message =$final_message['message'];
 
 
 }
@@ -92,18 +92,18 @@ else{
     $var2=$order['ticket_type'];
     $result = substr($var2, 0, 10);
    // $message .= $theme_park['name']." (".$main_ticket_type."),\n";
-   $message .= "$main_ticket_type \n";
-    $message .= date("D M d",strtotime($order['date_of_visit'])).", ".date("g:i A",strtotime($order['time']))." \n";
+//    $message .= "$main_ticket_type \n";
+    // $message .= date("D M d",strtotime($order['date_of_visit'])).", ".date("g:i A",strtotime($order['time']))." \n";
 
-    $message .= "Your Total  is $".$order['total']." CASH ONLY\n";
-    $message .= "Exact Amount Please. We Do Not Have Change. \n";
+    // $message .= "Your Total  is $".$order['total']." CASH ONLY\n";
+    // $message .= "Exact Amount Please. We Do Not Have Change. \n";
 
     $park_code = preg_replace('/[^a-zA-Z]/', '', $order_id);
 
     $get_msg="SELECT message from text_messages where theme_park_id='{$order['theme_park_id']}' and status = 0";
     $res_msg = mysqli_query($db, $get_msg);
     $final_message = mysqli_fetch_assoc($res_msg);
-    $message .=$final_message['message'];
+    $message =$final_message['message'];
 
 
 }

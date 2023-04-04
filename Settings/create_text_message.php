@@ -44,9 +44,15 @@ $message_attachment_DBpath = "images/message_attachments/".$filename;
 move_uploaded_file($_FILES['message_attachment']['tmp_name'], "../images/message_attachments/".$filename);
     
 }
+$send_to='';
+if(isset($_POST['send_to']) && !empty($_POST['send_to'])){
+	$send_to = $_POST['send_to'];
+	$send_to = json_encode($send_to);
+}
+$admin_message = $_POST['admin_message'];
 
 // Store in database
-$sql = "INSERT INTO `text_messages` (title, message,theme_park_id,status,message_attachment) VALUES ('$title', '$message','$theme_park_id','$status','$message_attachment_DBpath')";
+$sql = "INSERT INTO `text_messages` (title, message,theme_park_id,status,message_attachment,send_to,admin_message) VALUES ('$title', '$message','$theme_park_id','$status','$message_attachment_DBpath','$send_to',admin_message)";
 $result = mysqli_query($db, $sql);
 //var_dump($sql);
 $_SESSION['success_msg'] = "Text message successfully added.";

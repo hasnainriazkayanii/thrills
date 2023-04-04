@@ -27,6 +27,12 @@ if (!isset($_POST['message']) || empty($_POST['message']))
 	header("Location: text_messages.php");
 	exit();
 }
+$send_to='';
+if(isset($_POST['send_to']) && !empty($_POST['send_to'])){
+	$send_to = $_POST['send_to'];
+	$send_to = json_encode($send_to);
+}
+$admin_message = $_POST['admin_message'];
 
 if (!isset($_POST['title']) || empty($_POST['title']))
 	$title = null;
@@ -38,7 +44,7 @@ else
 	$message = htmlspecialchars($_POST['message'],ENT_QUOTES);
 
 if($_FILES['edit-message-attach']['name']==""){
-    $sql = "UPDATE `text_messages` SET title='$title',theme_park_id='$theme_park_id',status='$status',message='$message' WHERE id=$id";
+    $sql = "UPDATE `text_messages` SET title='$title',theme_park_id='$theme_park_id',status='$status',message='$message',send_to = '$send_to',admin_message='$admin_message' WHERE id=$id";
 }
 else{
     $new_file = $_FILES['edit-message-attach']['name'];
@@ -48,7 +54,9 @@ else{
     
     unlink("../".$image_path);
     move_uploaded_file($_FILES['edit-message-attach']['tmp_name'], "../images/message_attachments/".$new_file);
-    $sql = "UPDATE `text_messages` SET title='$title',theme_park_id='$theme_park_id',status='$status',message='$message',message_attachment='$db_path' WHERE id=$id";
+
+
+    $sql = "UPDATE `text_messages` SET title='$title',theme_park_id='$theme_park_id',status='$status',message='$message',message_attachment='$db_path',send_to = '$send_to',admin_message='$admin_message' WHERE id=$id";
   //  var_dump($sql);
     
 }

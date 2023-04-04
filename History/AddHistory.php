@@ -17,9 +17,9 @@ $id = $_GET['id'];
 
 
 
-// print_r($_POST);exit;
 
 if (isset($_POST['ticket_id'])) {
+ 
 
   $loopCount = count($_POST['ticket_id']);
 
@@ -79,11 +79,8 @@ if (isset($_POST['ticket_id'])) {
 
       $result = mysqli_query($db, $history_insert);
     }
-
-    //header( "Location: Guestdetails.php" );
-
-
-
+    $_SESSION['success_msg'] ='Ticket Usage Added Successfully';
+    header( "Location: ../Ticket/DetailsTicket.php?active=0" );
   }
 }
 
@@ -110,58 +107,58 @@ $theme_park_parents = mysqli_query($db, $theme_park_parents_query);
 
 <head>
 
-  <title>Bootstrap Example</title>
+    <title>Bootstrap Example</title>
 
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
-  <style>
+    <style>
     @media only screen and (max-width: 780px) and (min-width: 750px) {
 
 
 
-      .left-col {
-        margin-top: 10px;
+        .left-col {
+            margin-top: 10px;
 
-        float: left !important;
+            float: left !important;
 
-        width: 52% !important;
+            width: 52% !important;
 
-      }
+        }
 
-      .right-col {
-        margin-top: 10px;
+        .right-col {
+            margin-top: 10px;
 
-        float: left !important;
+            float: left !important;
 
-        width: 48% !important;
+            width: 48% !important;
 
-      }
+        }
 
     }
 
     @media only screen and (max-width: 1290px) and (min-width: 1230px) {
 
-      .left-col {
-        margin-top: 10px;
+        .left-col {
+            margin-top: 10px;
 
-        float: left !important;
+            float: left !important;
 
-        width: 28% !important;
+            width: 28% !important;
 
-      }
+        }
 
-      .right-col {
-        margin-top: 10px;
+        .right-col {
+            margin-top: 10px;
 
-        float: left !important;
+            float: left !important;
 
-        width: 70% !important;
+            width: 70% !important;
 
-      }
+        }
 
     }
 
@@ -169,9 +166,9 @@ $theme_park_parents = mysqli_query($db, $theme_park_parents_query);
 
     .nav-link {
 
-      background-color: #212529;
+        background-color: #212529;
 
-      color: #ecb78b;
+        color: #ecb78b;
 
 
 
@@ -179,9 +176,9 @@ $theme_park_parents = mysqli_query($db, $theme_park_parents_query);
 
     .nav-link active {
 
-      background-color: #ffffff;
+        background-color: #ffffff;
 
-      color: black;
+        color: black;
 
 
 
@@ -191,222 +188,222 @@ $theme_park_parents = mysqli_query($db, $theme_park_parents_query);
 
     .nav-tabs .nav-link {
 
-      border: 1px solid transparent;
+        border: 1px solid transparent;
 
-      border-top-left-radius: .0rem !important;
+        border-top-left-radius: .0rem !important;
 
-      border-top-right-radius: .0rem !important;
+        border-top-right-radius: .0rem !important;
 
     }
 
     .nav-tabs .nav-item {
 
-      margin-left: 5px;
+        margin-left: 5px;
 
-      margin-bottom: -1px;
+        margin-bottom: -1px;
 
     }
 
     .block {
 
-      display: block;
+        display: block;
 
-      border: 1px solid #ccc;
+        border: 1px solid #ccc;
 
-      padding: 10px;
+        padding: 10px;
 
     }
 
     .edit-butns {
 
-      margin-top: -10px;
+        margin-top: -10px;
 
-      padding: 6px 15px 5px 15px;
+        padding: 6px 15px 5px 15px;
 
-      background-color: #212529;
+        background-color: #212529;
 
-      color: #ecb78b;
+        color: #ecb78b;
 
     }
 
     @media only screen and (max-width: 3500px) and (min-width:740px) {
 
-      .custm-space {
+        .custm-space {
 
-        margin-top: 5px !important;
+            margin-top: 5px !important;
 
-      }
+        }
 
-      .new-form {
+        .new-form {
 
-        margin-top: -30px !important;
+            margin-top: -30px !important;
 
-      }
+        }
 
-      .new-header1 {
+        .new-header1 {
 
-        float: left !important;
+            float: left !important;
 
-        width: 10% !important;
+            width: 10% !important;
 
-        top: 10px;
+            top: 10px;
 
-      }
-
-
-
-      .new-header {
+        }
 
 
 
-        float: left !important;
+        .new-header {
 
-        width: 90% !important;
 
-      }
 
-      hr {
+            float: left !important;
 
-        margin-top: 3rem !important;
+            width: 90% !important;
 
-        margin-bottom: 1rem;
+        }
 
-        border: 0;
+        hr {
 
-        border-top: 1px solid rgba(0, 0, 0, .1);
+            margin-top: 3rem !important;
 
-      }
+            margin-bottom: 1rem;
 
-      .small-view {
+            border: 0;
 
-        margin-top: 10px !important;
+            border-top: 1px solid rgba(0, 0, 0, .1);
 
-      }
+        }
+
+        .small-view {
+
+            margin-top: 10px !important;
+
+        }
 
     }
 
     @media only screen and (max-width: 678px) and (min-width:0px) {
 
-      .left-col {
-        margin-top: 10px;
+        .left-col {
+            margin-top: 10px;
 
-        float: left !important;
+            float: left !important;
 
-        width: 50% !important;
+            width: 50% !important;
 
-      }
+        }
 
-      .right-col {
-        margin-top: 10px;
+        .right-col {
+            margin-top: 10px;
 
-        float: left !important;
+            float: left !important;
 
-        width: 50% !important;
+            width: 50% !important;
 
-      }
+        }
 
-      .new-fonts {
+        .new-fonts {
 
-        font-size: 20px !important;
+            font-size: 20px !important;
 
-      }
+        }
 
-      .small-view {
+        .small-view {
 
-        display: table !important;
+            display: table !important;
 
-        padding: -2px !important;
+            padding: -2px !important;
 
-      }
+        }
 
-      .new-header {
+        .new-header {
 
-        margin-top: 10px !important;
+            margin-top: 10px !important;
 
-        width: 77% !important;
+            width: 77% !important;
 
-        float: left !important;
+            float: left !important;
 
-      }
+        }
 
-      .new-header1 {
+        .new-header1 {
 
-        margin-top: 15px !important;
+            margin-top: 15px !important;
 
-        width: 20% !important;
+            width: 20% !important;
 
-        float: left !important;
+            float: left !important;
 
-      }
+        }
 
-      .nav-1 {
+        .nav-1 {
 
-        width: 28% !important;
+            width: 28% !important;
 
-      }
+        }
 
-      .nav-2 {
+        .nav-2 {
 
-        width: 30% !important;
+            width: 30% !important;
 
-      }
+        }
 
-      .nav-3 {
+        .nav-3 {
 
-        width: 33% !important;
+            width: 33% !important;
 
-      }
+        }
 
-      .nav-tabs .nav-link {
+        .nav-tabs .nav-link {
 
-        font-size: 10px !important;
+            font-size: 10px !important;
 
-        border: 1px solid transparent;
+            border: 1px solid transparent;
 
-        border-top-left-radius: .25rem;
+            border-top-left-radius: .25rem;
 
-        border-top-right-radius: .25rem;
+            border-top-right-radius: .25rem;
 
-      }
+        }
 
-      .nav-tabs .nav-item.show .nav-link,
-      .nav-tabs .nav-link.active {
+        .nav-tabs .nav-item.show .nav-link,
+        .nav-tabs .nav-link.active {
 
-        font-size: 10px !important;
+            font-size: 10px !important;
 
-        color: #495057;
+            color: #495057;
 
-        background-color: #fff;
+            background-color: #fff;
 
-        border-color: #dee2e6 #dee2e6 #fff;
+            border-color: #dee2e6 #dee2e6 #fff;
 
-      }
+        }
 
     }
 
     .navbar-dark .navbar-nav .nav-link {
 
-      background-color: transparent !important;
+        background-color: transparent !important;
 
-      color: rgba(255, 255, 255, .5);
+        color: rgba(255, 255, 255, .5);
 
     }
 
     .left-col {
-      margin-top: 10px;
+        margin-top: 10px;
 
-      float: left !important;
+        float: left !important;
 
-      width: 32% !important;
+        width: 32% !important;
 
     }
 
     .right-col {
-      margin-top: 10px;
+        margin-top: 10px;
 
-      float: left !important;
+        float: left !important;
 
-      width: 67% !important;
+        width: 67% !important;
 
     }
 
@@ -414,16 +411,16 @@ $theme_park_parents = mysqli_query($db, $theme_park_parents_query);
 
     #wrapper #content-wrapper {
 
-      overflow-x: hidden;
+        overflow-x: hidden;
 
-      width: 100%;
+        width: 100%;
 
-      padding-top: 0rem !important;
+        padding-top: 0rem !important;
 
-      padding-bottom: 80px;
+        padding-bottom: 80px;
 
     }
-  </style>
+    </style>
 
 </head>
 
@@ -449,80 +446,80 @@ $result = mysqli_query($db, $sql);
 
 
 
-  <div class="container" style="border:1px solid #eee;">
+    <div class="container" style="border:1px solid #eee;">
 
 
 
-    <div class="col-md-12 small-view">
+        <div class="col-md-12 small-view">
 
-      <div class="col-md-11 new-header">
+            <div class="col-md-11 new-header">
 
-        <h3 class="new-fonts">Ticket Details</h3>
+                <h3 class="new-fonts">Ticket Details</h3>
 
-      </div>
-
-
-
-
-
-    </div>
-
-    <hr>
-
-
-
-    <body>
-
-      <br>
+            </div>
 
 
 
 
 
-      <!-- Nav tabs -->
+        </div>
+
+        <hr>
 
 
 
-      <ul class="nav nav-tabs new-form" role="tablist">
+        <body>
 
-        <li class="nav-item nav-1">
-
-          <a class="nav-link active" data-toggle="tab" href="#home">Add Usage</a>
-
-        </li>
-
-        <li class="nav-item  nav-2">
-
-          <a class="nav-link " data-toggle="tab" href="#menu1">Assignment</a>
-        </li>
-        <li class="nav-item  nav-3">
-          <a class="nav-link " data-toggle="tab" href="#menu2">Edit</a>
-        </li>
-      </ul>
+            <br>
 
 
 
-      <!-- Tab panes -->
 
-      <div class="tab-content ">
 
-        <div id="home" class="container tab-pane active"><br>
+            <!-- Nav tabs -->
 
-          <form name="Addorders1" action="" method="POST">
 
-            <div class="optionBox">
 
-              <div class="block">
+            <ul class="nav nav-tabs new-form" role="tablist">
 
-                <div class="row">
+                <li class="nav-item nav-1">
 
-                  <div class="col-md-12">
+                    <a class="nav-link" data-toggle="tab" href="#home">Add Usage</a>
 
-                    <label for="fname">Barcode</label>
+                </li>
 
-                    <select class="form-control" name="ticket_id[]" multiple>
+                <li class="nav-item  nav-2">
 
-                      <?php
+                    <a class="nav-link " data-toggle="tab" href="#menu1">Assignment</a>
+                </li>
+                <li class="nav-item  nav-3">
+                    <a class="nav-link active" data-toggle="tab" href="#menu2">Edit</a>
+                </li>
+            </ul>
+
+
+
+            <!-- Tab panes -->
+
+            <div class="tab-content ">
+
+                <div id="home" class="container tab-pane"><br>
+
+                    <form name="Addorders1" action="" method="POST">
+
+                        <div class="optionBox">
+
+                            <div class="block">
+
+                                <div class="row">
+
+                                    <div class="col-md-12">
+
+                                        <label for="fname">Barcode</label>
+
+                                        <select class="form-control" name="ticket_id[]" multiple>
+
+                                            <?php
 
                       while ($row = mysqli_fetch_assoc($result)) {
 
@@ -560,15 +557,15 @@ $result = mysqli_query($db, $sql);
 
                       ?>
 
-                        <option <?= $selected; ?> value="<?= $row['ticketshowid'] ?>">
+                                            <option <?= $selected; ?> value="<?= $row['ticketshowid'] ?>">
 
-                          <?= $ticketToShow ?>
+                                                <?= $ticketToShow ?>
 
-                        </option>
+                                            </option>
 
 
 
-                      <?php
+                                            <?php
 
                       }
 
@@ -576,199 +573,202 @@ $result = mysqli_query($db, $sql);
 
                       ?>
 
-                    </select>
+                                        </select>
 
-                  </div>
+                                    </div>
+                                </div>
 
-                  <div class="col-md-4 custm-space">
+                                <div class="row">
+                                    <div class="col-md-3 custm-space">
 
-                    <div class="form-group">
+                                        <div class="form-group">
 
-                      <label style="display: block;" for="fname">Date*</label>
+                                            <label style="display: block;" for="fname">Date*</label>
 
-                      <input type="date" class="typeahead form-control" name="date" id="date" placeholder="Date">
-
-
-
-                    </div>
-
-                  </div>
+                                            <input type="date" required class="typeahead form-control" name="date"
+                                                id="date" placeholder="Date">
 
 
 
-                  <div class="col-md-4 custm-space">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                                    <thead>
+
+                                        <tr>
+                                            <th>Park</th>
+                                            <th>Transfer Method</th>
+                                            <th>Time</th>
+                                            <th>AM/PM</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody class="addmoreslots">
+                                        <tr>
+                                            <td>
+                                                <select name="park[]" required class="typeahead form-control">
+
+                                                    <option value="">Please select park</option>
+
+                                                    <option value="Universal Studios">Universal Studios</option>
+
+                                                    <option value="Islands Of Adventure">Islands Of Adventure</option>
+
+                                                    <option value="Volcano Bay Water Park">Volcano Bay</option>
+                                                    <option value="">---------------</option>
+                                                    <option value="SeaWorld">SeaWorld</option>
+                                                    <option value="Busch Gardens">Busch Gardens</option>
+                                                    <option value="Aquatica">Aquatica</option>
+
+
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="transfer_method[]" required class="form-control">
 
 
 
-                    <label style="display: block;" for="fname">Park *</label>
+                                                    <option value="Main">Main</option>
 
-                    <select name="park[]" class="typeahead form-control">
-
-                      <option value="">Please select park</option>
-
-                      <option value="Universal Studios">Universal Studios</option>
-
-                      <option value="Islands Of Adventure">Islands Of Adventure</option>
-
-                      <option value="Volcano Bay Water Park">Volcano Bay</option>
-                      <option value="">---------------</option>
-                      <option value="SeaWorld">SeaWorld</option>
-                      <option value="Busch Gardens">Busch Gardens</option>
-                      <option value="Aquatica">Aquatica</option>
+                                                    <option value="Train">Train</option>
 
 
-                    </select>
+                                                </select>
 
-                  </div>
+                                            </td>
+                                            <td> <select name="time[]" required class="typeahead form-control">
+                                                    <option value="">Select</option>
+                                                    <option value="8:00">8</option>
+                                                    <option value="8:30">8:30</option>
+                                                    <option value="9:00">9</option>
+                                                    <option value="9:30">9:30</option>
+                                                    <option value="10:00">10</option>
+                                                    <option value="10:30">10:30</option>
+                                                    <option value="11:00">11</option>
+                                                    <option value="11:30">11:30</option>
+                                                    <option value="12:00">12 Noon</option>
+                                                    <option value="12:30">12:30</option>
+                                                    <option value="1:00">1</option>
+                                                    <option value="1:30">1:30</option>
+                                                    <option value="2:00">2</option>
+                                                    <option value="2:30">2:30</option>
+                                                    <option value="3:00">3</option>
+                                                    <option value="3:30">3:30</option>
+                                                    <option value="4:00">4</option>
+                                                    <option value="4:30">4:30</option>
+                                                    <option value="5:00">5</option>
+                                                    <option value="5:30">5:30</option>
+                                                    <option value="6:00">6</option>
+                                                    <option value="6:30">6:30</option>
+                                                    <option value="7:00">7</option>
+                                                    <option value="7:30">7:30</option>
+                                                </select></td>
+                                            <td>
+                                           
+                                            <div class="form-check form-check-inline">
+                                                  <input type="radio" name="time_period[0]" id="am-0" checked
+                                                       class="form-check-input" value="AM"> <label class="form-check-label" for="am-0">AM</label>
+                                              
+                                                       <input type="radio" name="time_period[0]" id="pm-0"
+                                                       class="form-check-input ml-2"  value="PM"> <label  class="form-check-label" for="pm-0">PM</label>
+                                                </div>
+                                           
+                                            </td>
+                                            <td></td>
 
-                  <input type="hidden" name="transfer_method[]" value="">
+                                        </tr>
+                                      </tbody>
+                                      <tbody>
+                                        <tr>
+                                          <td> <button type="button" class="btn btn-dark add add-btn">Add More</button></td>
+                                        </tr>
+                                      </tbody>
+                                </table>
 
-                  <div class="col-md-2 custm-space">
-
-                    <div class="form-group">
-
-                      <label style="display: block;" for="fname">Time.*</label>
-                      <select name="time[]" class="typeahead form-control">
-                          <option value="">Select</option>
-                        <option value="8:00">8</option>
-                        <option value="8:30">8:30</option>
-                        <option value="9:00">9</option>
-                        <option value="9:30">9:30</option>
-                        <option value="10:00">10</option>
-                        <option value="10:30">10:30</option>
-                        <option value="11:00">11</option>
-                        <option value="11:30">11:30</option>
-                        <option value="12:00">12 Noon</option>
-                        <option value="12:30">12:30</option>
-                        <option value="1:00">1</option>
-                        <option value="1:30">1:30</option>
-                        <option value="2:00">2</option>
-                        <option value="2:30">2:30</option>
-                        <option value="3:00">3</option>
-                        <option value="3:30">3:30</option>
-                        <option value="4:00">4</option>
-                        <option value="4:30">4:30</option>
-                        <option value="5:00">5</option>
-                        <option value="5:30">5:30</option>
-                        <option value="6:00">6</option>
-                        <option value="6:30">6:30</option>
-                        <option value="7:00">7</option>
-                        <option value="7:30">7:30</option>
-                      </select>
-
-
-                      <!-- <input class="checkin"  name="time[]" width="100%" /> -->
+                                <button type="submit" class="btn btn-success" value="submit" name="submit"
+                                        id="save_button">Submit</button>
 
 
 
+                                        
+
+                            </div>
 
 
-                    </div>
 
-                  </div>
+                            
 
-                  <div class="col-md-2 custm-space">
-                    <div class="form-group pt-sm-4" style="display: flex; align-items: center; height: 100%;">
-                      <div class="mr-2">
-                        <input type="radio" name="time_period[0]" id="am-0" value="AM"><label for="am-0">AM</label>
-                      </div>
-                      <div>
-                        <input type="radio" name="time_period[0]" id="pm-0" value="PM"><label for="pm-0">PM</label>
-                      </div>
-                    </div>
-                  </div>
+                        </div>
+
+                    </form>
+
+                    <script>
+                    countu = 0;
+
+                    $('.add').click(function() {
+
+                        countu++;
+
+                        $('.addmoreslots').append(
+                            '<tr><td><select required name="park[]" class="typeahead form-control"><option value="">Please select park</option><option value="Universal Studios">Universal Studios</option><option value="Islands Of Adventure">Islands Of Adventure</option><option value="Volcano Bay Water">Volcano Bay Water</option></select></td><td><select class="form-control"name="transfer_method[]"><option  value="main">Main</option><option  value="train">Train</option></select></td><td><select name="time[]" class="typeahead form-control"><option value="8:00">8</option><option value="8:30">8:30</option><option value="9:00">9</option><option value="9:30">9:30</option><option value="10:00">10</option><option value="10:30">10:30</option><option value="11:00">11</option><option value="11:30">11:30</option><option value="12:00">12 Noon</option><option value="12:30">12:30</option><option value="1:00">1</option><option value="1:30">1:30</option><option value="2:00">2</option><option value="2:30">2:30</option><option value="3:00">3</option><option value="3:30">3:30</option><option value="4:00">4</option><option value="4:30">4:30</option><option value="5:00">5</option><option value="5:30">5:30</option><option value="6:00">6</option><option value="6:30">6:30</option><option value="7:00">7</option><option value="7:30">7:30</option></select></td><td><div class="form-check form-check-inline"><input type="radio" name="time_period[' +
+                            countu + ']" id="am-' + countu + '" class="form-check-input" value="AM" checked><label class="form-check-label"  for="am-' +
+                            countu +
+                            '">AM</label><input type="radio" class="form-check-input ml-2" name="time_period[' + countu +
+                            ']" id="pm-' + countu +
+                            '" value="PM"><label class="form-check-label" for="pm-' + countu +
+                            '">PM</label></div></td><td><button type="button" class="btn btn-danger remove red">Delete</button></td>'
+                        );
+
+
+
+                        $('#timed' + countu).timepicker({
+
+                            uiLibrary: 'bootstrap4'
+
+                        });
+
+
+
+                    });
+
+                    $('.optionBox').on('click', '.remove', function() {
+
+                        $(this).parent().parent('tr').remove();
+
+                    });
+
+                    $('#status_no').click(function() {
+
+                        $('#save_button').css("display", "block");
+
+                    });
+
+                    $('.add').click(function() {
+
+                        // $('#save_button').css("display", "none");
+
+                    });
+                    </script>
+
+
 
                 </div>
 
-              </div>
 
 
+                <div id="menu1" class="container tab-pane fade"><br>
 
-              <div class="block">
+                    <div class="table-responsive">
 
-                <label style="display: block;" for="fname">Want to add more?</label>
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
-                <input type="radio" class="add add-btn" name="status" value="1"> Yes<br>
+                            <thead>
 
-                <input type="radio" id="status_no" name="status" value="0"> No<br>
-
-                <div class="form-group">
-
-                  <button type="submit" value="submit" name="submit" id="save_button" style="display: none;">Submit</button>
-
-                </div>
-
-
-
-
-
-              </div>
-
-            </div>
-
-          </form>
-
-          <script>
-            countu = 0;
-
-            $('.add').click(function() {
-
-              countu++;
-
-              $('.block:last').before(
-                '<div class="block"><div class="row"><div class="col-md-6"><label style="display: block;" for="fname">Park *</label><select name="park[]" class="typeahead form-control"><option value="">Please select park</option><option value="Universal Studios">Universal Studios</option><option value="Islands Of Adventure">Islands Of Adventure</option><option value="Volcano Bay Water">Volcano Bay Water</option></select></div><div class="col-md-4"><div class="form-group"><label style="display: block;" for="fname">Time.*</label><select name="time[]" class="typeahead form-control"><option value="8:00">8</option><option value="8:30">8:30</option><option value="9:00">9</option><option value="9:30">9:30</option><option value="10:00">10</option><option value="10:30">10:30</option><option value="11:00">11</option><option value="11:30">11:30</option><option value="12:00">12 Noon</option><option value="12:30">12:30</option><option value="1:00">1</option><option value="1:30">1:30</option><option value="2:00">2</option><option value="2:30">2:30</option><option value="3:00">3</option><option value="3:30">3:30</option><option value="4:00">4</option><option value="4:30">4:30</option><option value="5:00">5</option><option value="5:30">5:30</option><option value="6:00">6</option><option value="6:30">6:30</option><option value="7:00">7</option><option value="7:30">7:30</option></select></div></div><div class="col-md-2 custm-space"><div class="form-group pt-sm-4" style="display: flex; align-items: center; height: 100%;"><div class="mr-2"><input type="radio" name="time_period[' +
-                countu + ']" id="am-' + countu + '" value="AM"><label for="am-' + countu +
-                '">AM</label></div><div><input type="radio" name="time_period[' + countu + ']" id="pm-' + countu +
-                '" value="PM"><label for="pm-' + countu +
-                '">PM</label></div></div></div><div class="col-md-12"><label for="type">Method of Transfer *</label><select class="form-control"name="transfer_method[]"><option  value="main">Main</option><option  value="train">Train</option></select></div></div><br><button type="button" class="btn btn-primary remove red"style="background-color:#212529;color:#ecb78b">Remove History</button></div>'
-              );
-
-
-
-              $('#timed' + countu).timepicker({
-
-                uiLibrary: 'bootstrap4'
-
-              });
-
-
-
-            });
-
-            $('.optionBox').on('click', '.remove', function() {
-
-              $(this).parent().remove();
-
-            });
-
-            $('#status_no').click(function() {
-
-              $('#save_button').css("display", "block");
-
-            });
-
-            $('.add').click(function() {
-
-              $('#save_button').css("display", "none");
-
-            });
-          </script>
-
-
-
-        </div>
-
-
-
-        <div id="menu1" class="container tab-pane fade"><br>
-
-          <div class="table-responsive">
-
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-
-              <thead>
-
-                <?php
+                                <?php
 
                 $id = $_GET['id'];
 
@@ -790,22 +790,22 @@ $result = mysqli_query($db, $sql);
 
                 ?>
 
-                <tr>
-                  <th>Order Date</th>
+                                <tr>
+                                    <th>Order Date</th>
 
-                  <th>Customer Name</th>
+                                    <th>Customer Name</th>
 
-                  <!-- <th>Guest Mobile</th> -->
+                                    <!-- <th>Guest Mobile</th> -->
 
-                  <th>Ticket Id</th>
+                                    <th>Ticket Id</th>
 
-                  <th>Login Id</th>
+                                    <th>Login Id</th>
 
-                  <th>Assign</th>
+                                    <th>Assign</th>
 
 
 
-                  <!-- <th>Batch Number</th>
+                                    <!-- <th>Batch Number</th>
 
                      <th>Link</th>
 
@@ -813,17 +813,17 @@ $result = mysqli_query($db, $sql);
 
 
 
-                </tr>
+                                </tr>
 
-              </thead>
+                            </thead>
 
 
 
-              <tbody>
+                            <tbody>
 
-              <tbody>
+                            <tbody>
 
-                <?php
+                                <?php
 
                 if (mysqli_num_rows($ethnicitsult) > 0) {
 
@@ -860,33 +860,33 @@ $result = mysqli_query($db, $sql);
 
 
 
-              </tbody>
+                            </tbody>
 
-            </table>
+                        </table>
 
-          </div>
+                    </div>
 
-        </div>
-
-
+                </div>
 
 
 
-        <div id="menu2" class="container tab-pane fade"><br>
+
+
+                <div id="menu2" class="container tab-pane active"><br>
 
 
 
-          <div class="container-fluid">
+                    <div class="container-fluid">
 
-            <?php $status = $_SESSION['status']; ?>
+                        <?php $status = $_SESSION['status']; ?>
 
 
 
-            <div class="container-fluid" style="display:flex;justify-content:center;">
+                        <div class="container-fluid" style="display:flex;justify-content:center;">
 
-              <div class="col-md-12">
+                            <div class="col-md-12">
 
-                <?php
+                                <?php
 
                 $id = $_GET['id'];
 
@@ -900,50 +900,55 @@ $result = mysqli_query($db, $sql);
 
                 ?>
 
-                <form action="../Ticket/UpdateTicket.php?id=<?= $id ?>" autocomplete='off' method="post">
+                                <form action="../Ticket/UpdateTicket.php?id=<?= $id ?>" autocomplete='off'
+                                    method="post">
 
-                  <div class="row small-pos" style="display:table;">
+                                    <div class="row small-pos" style="display:table;">
 
-                    <!-- Barcode input field-->
+                                        <!-- Barcode input field-->
 
-                    <div class="col-md-6" style="float:left;">
+                                        <div class="col-md-6" style="float:left;">
 
-                      <div class="left-col">
+                                            <div class="left-col">
 
-                        <label for="barcode">Barcode</label>
+                                                <label for="barcode">Barcode</label>
 
-                      </div>
+                                            </div>
 
-                      <div class="right-col">
+                                            <div class="right-col">
 
-                        <input type="text" class="form-control" required onblur='check_ticket_id_exists();' maxlength="20" onkeypress="return AllowNumbersOnly(event)" name="ticketshowid" id="ticketshowid" aria-describedby="fname" placeholder="Barcode *" value="<?= $user['ticketshowid'] ?>">
+                                                <input type="text" class="form-control" required
+                                                    onblur='check_ticket_id_exists();' maxlength="20"
+                                                    onkeypress="return AllowNumbersOnly(event)" name="ticketshowid"
+                                                    id="ticketshowid" aria-describedby="fname" placeholder="Barcode *"
+                                                    value="<?= $user['ticketshowid'] ?>">
 
-                        <span class="emailmessage"></span>
-
-
-
-                      </div>
-
-                    </div>
-
-
-                    <!-- Parent Theme park input field -->
-
-                    <div class="col-md-6 " style="float:left;">
-
-                      <div class="left-col">
+                                                <span class="emailmessage"></span>
 
 
 
-                        <label for="place">Parent Theme park*</label>
+                                            </div>
 
-                      </div>
+                                        </div>
 
-                      <div class="right-col">
 
-                        <select class="form-control" name="theme_park_parent_id">
+                                        <!-- Parent Theme park input field -->
 
-                          <?php
+                                        <div class="col-md-6 " style="float:left;">
+
+                                            <div class="left-col">
+
+
+
+                                                <label for="place">Parent Theme park*</label>
+
+                                            </div>
+
+                                            <div class="right-col">
+
+                                                <select class="form-control" name="theme_park_parent_id">
+
+                                                    <?php
 
                           while ($theme_park_parent = mysqli_fetch_assoc($theme_park_parents)) {
                             $tpp_name = $theme_park_parent['name'];
@@ -951,347 +956,364 @@ $result = mysqli_query($db, $sql);
                             $tpp_code = $theme_park_parent['code'];
                           ?>
 
-                            <option value="<?= $tpp_id ?>" <?php if ($tpp_id == $user['theme_park_parent_id']) echo 'selected'; ?>><?= $tpp_name ?>
-                            </option>
+                                                    <option value="<?= $tpp_id ?>"
+                                                        <?php if ($tpp_id == $user['theme_park_parent_id']) echo 'selected'; ?>>
+                                                        <?= $tpp_name ?>
+                                                    </option>
 
-                          <?php
+                                                    <?php
                           }
                           ?>
 
 
 
-                        </select>
+                                                </select>
 
 
 
-                      </div>
+                                            </div>
 
 
 
-                    </div>
+                                        </div>
 
-                    <!-- Type input Field -->
+                                        <!-- Type input Field -->
 
-                    <div class="col-md-6 " style="float:left;">
+                                        <div class="col-md-6 " style="float:left;">
 
-                      <div class="left-col">
-
-
-
-                        <label for="place">Type</label>
-
-                      </div>
-
-                      <div class="right-col">
-
-                        <select class="form-control" name="type">
+                                            <div class="left-col">
 
 
 
-                          <option <?php if ($user['type'] == 'adult') {
+                                                <label for="place">Type</label>
+
+                                            </div>
+
+                                            <div class="right-col">
+
+                                                <select class="form-control" name="type">
+
+
+
+                                                    <option <?php if ($user['type'] == 'adult') {
                                     echo "selected";
                                   } ?> value="adult">Adult</option>
 
-                          <option <?php if ($user['type'] == 'child') {
+                                                    <option <?php if ($user['type'] == 'child') {
                                     echo "selected";
                                   } ?> value="child">Child</option>
 
-                          <option <?php if ($user['type'] == 'youth') {
+                                                    <option <?php if ($user['type'] == 'youth') {
                                     echo "selected";
                                   } ?> value="youth">Youth</option>
 
-                          <option <?php if ($user['type'] == 'comp') {
+                                                    <option <?php if ($user['type'] == 'comp') {
                                     echo "selected";
                                   } ?> value="comp">Comp</option>
 
-                        </select>
+                                                </select>
 
 
 
-                      </div>
+                                            </div>
 
-                    </div>
-
-
-
-                    <!-- Ticket Print input field -->
-
-                    <div class="col-md-6 " style="float:left;">
-
-                      <div class="left-col">
+                                        </div>
 
 
 
-                        <label for="fname">Entitlement</label>
+                                        <!-- Ticket Print input field -->
 
-                      </div>
+                                        <div class="col-md-6 " style="float:left;">
 
-                      <div class="right-col">
-
-                        <input type="text" class="form-control" name="entitlement" id="entitlement" value='<?= $user['entitlement'] ?>' aria-describedby="entitlement" placeholder="Entitlement *">
-                      </div>
-
-                    </div>
-
-
-                    <!-- Set Link  input field-->
-
-                    <div class="col-md-6 " style="float:left;">
-
-                      <div class="left-col">
+                                            <div class="left-col">
 
 
 
-                        <label for="fname">Set Link</label>
+                                                <label for="fname">Entitlement</label>
 
-                      </div>
+                                            </div>
 
-                      <div class="right-col">
+                                            <div class="right-col">
 
-                        <input type="text" class="form-control" name="set" id="set" value='<?= $user['set_link'] ?>' aria-describedby="set" placeholder="Set Link *">
+                                                <input type="text" class="form-control" name="entitlement"
+                                                    id="entitlement" value='<?= $user['entitlement'] ?>'
+                                                    aria-describedby="entitlement" placeholder="Entitlement *">
+                                            </div>
 
-                      </div>
-
-
-
-                    </div>
-
+                                        </div>
 
 
-                    <!-- Ticket Type input field -->
+                                        <!-- Set Link  input field-->
 
-                    <div class="col-md-6" style="float:left;">
+                                        <div class="col-md-6 " style="float:left;">
 
-                      <div class="left-col">
+                                            <div class="left-col">
 
 
 
-                        <label for="fname">Ticket Type</label>
+                                                <label for="fname">Set Link</label>
 
-                      </div>
+                                            </div>
 
-                      <div class="right-col">
+                                            <div class="right-col">
 
-                        <select class="form-control" name="ticketpass">
+                                                <input type="text" class="form-control" name="set" id="set"
+                                                    value='<?= $user['set_link'] ?>' aria-describedby="set"
+                                                    placeholder="Set Link *">
+
+                                            </div>
 
 
 
-                          <option <?php if ($user['ticket_type'] == '1') {
+                                        </div>
+
+
+
+                                        <!-- Ticket Type input field -->
+
+                                        <div class="col-md-6" style="float:left;">
+
+                                            <div class="left-col">
+
+
+
+                                                <label for="fname">Ticket Type</label>
+
+                                            </div>
+
+                                            <div class="right-col">
+
+                                                <select class="form-control" name="ticketpass">
+
+
+
+                                                    <option <?php if ($user['ticket_type'] == '1') {
                                     echo "selected";
                                   } ?> value="1">Regular Ticket</option>
 
-                          <option <?php if ($user['ticket_type'] == '2') {
+                                                    <option <?php if ($user['ticket_type'] == '2') {
                                     echo "selected";
                                   } ?> value="2">Annual pass</option>
 
-                        </select>
+                                                </select>
 
 
 
-                      </div>
+                                            </div>
 
-                    </div>
-
-
-                    <!-- Name On Ticket input field -->
-                    <div class="col-md-6" style="float:left;">
-
-                      <div class="left-col">
-
-                        <label for="fname">Name On Ticket </label>
-
-                      </div>
-
-                      <div class="right-col">
-
-                        <input type="text" class="form-control" name="name_on_ticket" id="name" aria-describedby="node" placeholder="Name On Ticket  *" value='<?= $user['name_on_ticket'] ?>'>
-
-                      </div>
-
-                    </div>
+                                        </div>
 
 
-                    <!-- Gender input field -->
+                                        <!-- Name On Ticket input field -->
+                                        <div class="col-md-6" style="float:left;">
 
-                    <div class="col-md-6" style="float:left;">
+                                            <div class="left-col">
 
-                      <div class="left-col">
+                                                <label for="fname">Name On Ticket </label>
 
-                        <label for="gender">Gender</label>
+                                            </div>
 
-                      </div>
+                                            <div class="right-col">
 
-                      <div class="right-col">
+                                                <input type="text" class="form-control" name="name_on_ticket" id="name"
+                                                    aria-describedby="node" placeholder="Name On Ticket  *"
+                                                    value='<?= $user['name_on_ticket'] ?>'>
 
-                        <select class="form-control" name="gender">
+                                            </div>
 
-                          <option <?php if ($user['gender'] == 'Male') {
+                                        </div>
+
+
+                                        <!-- Gender input field -->
+
+                                        <div class="col-md-6" style="float:left;">
+
+                                            <div class="left-col">
+
+                                                <label for="gender">Gender</label>
+
+                                            </div>
+
+                                            <div class="right-col">
+
+                                                <select class="form-control" name="gender">
+
+                                                    <option <?php if ($user['gender'] == 'Male') {
                                     echo "selected";
                                   } ?> value="Male">Male</option>
 
-                          <option <?php if ($user['gender'] == 'Female') {
+                                                    <option <?php if ($user['gender'] == 'Female') {
                                     echo "selected";
                                   } ?> value="Female">Female</option>
 
-                        </select>
+                                                </select>
 
-                      </div>
+                                            </div>
 
-                    </div>
-
-
-                    <!-- Broker input field -->
-
-                    <div class="col-md-6 " style="float:left;">
-
-                      <div class="left-col">
+                                        </div>
 
 
+                                        <!-- Broker input field -->
 
-                        <label for="place">Broker</label>
+                                        <div class="col-md-6 " style="float:left;">
 
-                      </div>
-
-                      <div class="right-col">
-
-                        <input type="text" class="form-control" name="broker" value='<?= $user['broker'] ?>' id="ticketshow" aria-describedby="broker" placeholder="Broker*">
+                                            <div class="left-col">
 
 
 
-                      </div>
+                                                <label for="place">Broker</label>
 
-                    </div>
+                                            </div>
 
+                                            <div class="right-col">
 
-                    <!-- Purchase Price -->
-
-                    <div class="col-md-6 " style="float:left;">
-
-                      <div class="left-col">
-
-
-
-                        <label for="fname">Purchase Price</label>
-
-                      </div>
-
-                      <div class="right-col">
-
-                        <input type="text" class="form-control" placeholder='Price *' value='<?= $user['cost'] ?>' name="price" id="cost" aria-describedby="price">
+                                                <input type="text" class="form-control" name="broker"
+                                                    value='<?= $user['broker'] ?>' id="ticketshow"
+                                                    aria-describedby="broker" placeholder="Broker*">
 
 
 
-                      </div>
+                                            </div>
 
-                    </div>
-
-                    <!-- Expiration Date input field -->
-
-                    <div class="col-md-6 " style="float:left;">
-
-                      <div class="left-col">
-
-                        <label for="fname">Expiration Date</label>
-
-                      </div>
-
-                      <div class="right-col">
-
-                        <input type="date" required class="form-control" name="date" id="date" value='<?= $user['expire_date'] ?>' aria-describedby="date" placeholder="Expire Date *">
-                        <!-- theme park -->
-                      </div>
-
-                    </div>
+                                        </div>
 
 
-                    <!-- Active input field -->
-                    <div class="col-md-6 " style="float:left;">
+                                        <!-- Purchase Price -->
 
-                      <div class="left-col">
+                                        <div class="col-md-6 " style="float:left;">
+
+                                            <div class="left-col">
 
 
 
-                        <label for="place">Active</label>
+                                                <label for="fname">Purchase Price</label>
 
-                      </div>
+                                            </div>
 
-                      <div class="right-col">
+                                            <div class="right-col">
 
-                        <select class="form-control" name="active">
+                                                <input type="text" class="form-control" placeholder='Price *'
+                                                    value='<?= $user['cost'] ?>' name="price" id="cost"
+                                                    aria-describedby="price">
 
-                          <option <?php if ($user['active'] == 'True') {
+
+
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Expiration Date input field -->
+
+                                        <div class="col-md-6 " style="float:left;">
+
+                                            <div class="left-col">
+
+                                                <label for="fname">Expiration Date</label>
+
+                                            </div>
+
+                                            <div class="right-col">
+
+                                                <input type="date" required class="form-control" name="date" id="date"
+                                                    value='<?= $user['expire_date'] ?>' aria-describedby="date"
+                                                    placeholder="Expire Date *">
+                                                <!-- theme park -->
+                                            </div>
+
+                                        </div>
+
+
+                                        <!-- Active input field -->
+                                        <div class="col-md-6 " style="float:left;">
+
+                                            <div class="left-col">
+
+
+
+                                                <label for="place">Active</label>
+
+                                            </div>
+
+                                            <div class="right-col">
+
+                                                <select class="form-control" name="active">
+
+                                                    <option <?php if ($user['active'] == 'True') {
                                     echo "selected";
                                   } ?> value="True">true</option>
 
-                          <option <?php if ($user['active'] == 'False') {
+                                                    <option <?php if ($user['active'] == 'False') {
                                     echo "selected";
                                   } ?> value="False">false</option>
 
 
 
-                        </select>
+                                                </select>
 
 
 
-                      </div>
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <br>
+
+
+
+                                    <div class="text-center" style="margin-bottom: 10px;">
+
+                                        <button type="submit" name="updateticket"
+                                            class="btn btn-primary ">Submit</button>
+
+                                        <a onClick="return confirm('Are you sure you want to delete?')"
+                                            href="../Ticket/DeleteTicke.php?id=<?= $id ?>" name="updateticket"
+                                            class="btn btn-danger" style="margin-left: 5px;">Delete</a>
+
+
+
+                                    </div>
+
+
+
+
+
+                                </form>
+
+
+
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+                        <!-- /.content-wrapper -->
 
 
 
                     </div>
 
-                  </div>
-
-                  <br>
 
 
-
-                  <div class="text-center" style="margin-bottom: 10px;">
-
-                    <button type="submit" name="updateticket" class="btn btn-primary ">Submit</button>
-
-                    <a onClick="return confirm('Are you sure you want to delete?')" href="../Ticket/DeleteTicke.php?id=<?= $id ?>" name="updateticket" class="btn btn-danger" style="margin-left: 5px;">Delete</a>
-
-
-
-                  </div>
-
-
-
-
-
-                </form>
-
-
-
-              </div>
-
-
-
-
+                </div>
 
 
 
             </div>
 
-            <!-- /.content-wrapper -->
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-
-      </div>
 
 
 
 
-
-    </body>
+        </body>
 
 
 
@@ -1303,13 +1325,13 @@ $result = mysqli_query($db, $sql);
 
 
 
-    <!--------------- tabs start--------------------->
+        <!--------------- tabs start--------------------->
 
 
 
-    <!-------------------tabs content end-------------------->
+        <!-------------------tabs content end-------------------->
 
-    <!---div class="container" style="display:flex;justify-content:center;margin-top:4%; ">
+        <!---div class="container" style="display:flex;justify-content:center;margin-top:4%; ">
 
      <div class="col-md-8">
 
@@ -1515,25 +1537,25 @@ $('.add').click(function() {
 
 
 
-    <footer class="sticky-footer">
+        <footer class="sticky-footer">
 
-      <div class="container my-auto">
+            <div class="container my-auto">
 
-        <div class="copyright text-center my-auto">
+                <div class="copyright text-center my-auto">
 
-          <!-- <span>Copyright © Universal Orlando Resort 2018</span> -->
+                    <!-- <span>Copyright © Universal Orlando Resort 2018</span> -->
 
-        </div>
+                </div>
 
-      </div>
+            </div>
 
-    </footer>
+        </footer>
 
 
 
-  </div>
+    </div>
 
-  <!-- /.content-wrapper -->
+    <!-- /.content-wrapper -->
 
 
 
@@ -1543,7 +1565,8 @@ $('.add').click(function() {
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
 
@@ -1552,12 +1575,11 @@ $('.add').click(function() {
 
 
 <script>
-  $('.checkin').timepicker({
+$('.checkin').timepicker({
 
     uiLibrary: 'bootstrap4'
 
-  });
-
+});
 </script>
 
 

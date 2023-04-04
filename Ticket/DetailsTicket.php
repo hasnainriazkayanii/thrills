@@ -77,7 +77,17 @@ $targetpage = "https://dbaseconnect.com/cheapthrills/Ticket/DetailsTicket.php";
 
 
   <div class="container-fluid">
+  <?php
+        if(isset($_SESSION['success_msg'])){
+            ?>
+            <div class="alert alert-success">
+                <?= $_SESSION['success_msg'] ?>
+            </div>
 
+            <?php
+            unset($_SESSION['success_msg']);
+        }
+        ?>
     <div class="row">
 
       <div class="col-md-12">
