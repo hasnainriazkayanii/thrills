@@ -484,7 +484,8 @@ $result = mysqli_query($db, $sql);
 
                 <li class="nav-item nav-1">
 
-                    <a class="nav-link" data-toggle="tab" href="#home">Add Usage</a>
+                    <a class="nav-link <?=isset($_GET['tab']) && $_GET['tab']=='usage'?'active':''?>" data-toggle="tab"
+                        href="#home">Add Usage</a>
 
                 </li>
 
@@ -493,7 +494,8 @@ $result = mysqli_query($db, $sql);
                     <a class="nav-link " data-toggle="tab" href="#menu1">Assignment</a>
                 </li>
                 <li class="nav-item  nav-3">
-                    <a class="nav-link active" data-toggle="tab" href="#menu2">Edit</a>
+                    <a class="nav-link <?=isset($_GET['tab']) && $_GET['tab']=='edit'?'active':''?>" data-toggle="tab"
+                        href="#menu2">Edit</a>
                 </li>
             </ul>
 
@@ -503,7 +505,8 @@ $result = mysqli_query($db, $sql);
 
             <div class="tab-content ">
 
-                <div id="home" class="container tab-pane"><br>
+                <div id="home"
+                    class="container tab-pane <?=isset($_GET['tab']) && $_GET['tab']=='usage'?'active':'fade'?>"><br>
 
                     <form name="Addorders1" action="" method="POST">
 
@@ -594,113 +597,122 @@ $result = mysqli_query($db, $sql);
 
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                                                <thead>
 
-                                <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
-                                    <thead>
+                                                    <tr>
+                                                        <th>Park</th>
+                                                        <th>Transfer Method</th>
+                                                        <th>Time</th>
+                                                        <th>AM/PM</th>
+                                                        <th>Delete</th>
+                                                    </tr>
+                                                </thead>
 
-                                        <tr>
-                                            <th>Park</th>
-                                            <th>Transfer Method</th>
-                                            <th>Time</th>
-                                            <th>AM/PM</th>
-                                            <th>Delete</th>
-                                        </tr>
-                                    </thead>
+                                                <tbody class="addmoreslots">
+                                                    <tr>
+                                                        <td>
+                                                            <select name="park[]" required class="typeahead form-control">
 
-                                    <tbody class="addmoreslots">
-                                        <tr>
-                                            <td>
-                                                <select name="park[]" required class="typeahead form-control">
+                                                                <option value="">Please select park</option>
 
-                                                    <option value="">Please select park</option>
+                                                                <option value="Universal Studios">Universal Studios</option>
 
-                                                    <option value="Universal Studios">Universal Studios</option>
+                                                                <option value="Islands Of Adventure">Islands Of Adventure
+                                                                </option>
 
-                                                    <option value="Islands Of Adventure">Islands Of Adventure</option>
-
-                                                    <option value="Volcano Bay Water Park">Volcano Bay</option>
-                                                    <option value="">---------------</option>
-                                                    <option value="SeaWorld">SeaWorld</option>
-                                                    <option value="Busch Gardens">Busch Gardens</option>
-                                                    <option value="Aquatica">Aquatica</option>
-
-
-                                                </select>
-                                            </td>
-                                            <td>
-                                                <select name="transfer_method[]" required class="form-control">
+                                                                <option value="Volcano Bay Water Park">Volcano Bay</option>
+                                                                <option value="">---------------</option>
+                                                                <option value="SeaWorld">SeaWorld</option>
+                                                                <option value="Busch Gardens">Busch Gardens</option>
+                                                                <option value="Aquatica">Aquatica</option>
 
 
+                                                            </select>
+                                                        </td>
+                                                        <td>
+                                                            <select name="transfer_method[]" required class="form-control">
 
-                                                    <option value="Main">Main</option>
-
-                                                    <option value="Train">Train</option>
 
 
-                                                </select>
+                                                                <option value="Main">Main</option>
 
-                                            </td>
-                                            <td> <select name="time[]" required class="typeahead form-control">
-                                                    <option value="">Select</option>
-                                                    <option value="8:00">8</option>
-                                                    <option value="8:30">8:30</option>
-                                                    <option value="9:00">9</option>
-                                                    <option value="9:30">9:30</option>
-                                                    <option value="10:00">10</option>
-                                                    <option value="10:30">10:30</option>
-                                                    <option value="11:00">11</option>
-                                                    <option value="11:30">11:30</option>
-                                                    <option value="12:00">12 Noon</option>
-                                                    <option value="12:30">12:30</option>
-                                                    <option value="1:00">1</option>
-                                                    <option value="1:30">1:30</option>
-                                                    <option value="2:00">2</option>
-                                                    <option value="2:30">2:30</option>
-                                                    <option value="3:00">3</option>
-                                                    <option value="3:30">3:30</option>
-                                                    <option value="4:00">4</option>
-                                                    <option value="4:30">4:30</option>
-                                                    <option value="5:00">5</option>
-                                                    <option value="5:30">5:30</option>
-                                                    <option value="6:00">6</option>
-                                                    <option value="6:30">6:30</option>
-                                                    <option value="7:00">7</option>
-                                                    <option value="7:30">7:30</option>
-                                                </select></td>
-                                            <td>
-                                           
-                                            <div class="form-check form-check-inline">
-                                                  <input type="radio" name="time_period[0]" id="am-0" checked
-                                                       class="form-check-input" value="AM"> <label class="form-check-label" for="am-0">AM</label>
-                                              
-                                                       <input type="radio" name="time_period[0]" id="pm-0"
-                                                       class="form-check-input ml-2"  value="PM"> <label  class="form-check-label" for="pm-0">PM</label>
-                                                </div>
-                                           
-                                            </td>
-                                            <td></td>
+                                                                <option value="Train">Train</option>
 
-                                        </tr>
-                                      </tbody>
-                                      <tbody>
-                                        <tr>
-                                          <td> <button type="button" class="btn btn-dark add add-btn">Add More</button></td>
-                                        </tr>
-                                      </tbody>
-                                </table>
+
+                                                            </select>
+
+                                                        </td>
+                                                        <td> <select name="time[]" required class="typeahead form-control">
+                                                                <option value="">Select</option>
+                                                                <option value="8:00">8</option>
+                                                                <option value="8:30">8:30</option>
+                                                                <option value="9:00">9</option>
+                                                                <option value="9:30">9:30</option>
+                                                                <option value="10:00">10</option>
+                                                                <option value="10:30">10:30</option>
+                                                                <option value="11:00">11</option>
+                                                                <option value="11:30">11:30</option>
+                                                                <option value="12:00">12 Noon</option>
+                                                                <option value="12:30">12:30</option>
+                                                                <option value="1:00">1</option>
+                                                                <option value="1:30">1:30</option>
+                                                                <option value="2:00">2</option>
+                                                                <option value="2:30">2:30</option>
+                                                                <option value="3:00">3</option>
+                                                                <option value="3:30">3:30</option>
+                                                                <option value="4:00">4</option>
+                                                                <option value="4:30">4:30</option>
+                                                                <option value="5:00">5</option>
+                                                                <option value="5:30">5:30</option>
+                                                                <option value="6:00">6</option>
+                                                                <option value="6:30">6:30</option>
+                                                                <option value="7:00">7</option>
+                                                                <option value="7:30">7:30</option>
+                                                            </select></td>
+                                                        <td>
+
+                                                            <div class="form-check form-check-inline">
+                                                                <input type="radio" name="time_period[0]" id="am-0" checked
+                                                                    class="form-check-input" value="AM"> <label
+                                                                    class="form-check-label" for="am-0">AM</label>
+
+                                                                <input type="radio" name="time_period[0]" id="pm-0"
+                                                                    class="form-check-input ml-2" value="PM"> <label
+                                                                    class="form-check-label" for="pm-0">PM</label>
+                                                            </div>
+
+                                                        </td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                </tbody>
+                                                <tbody>
+                                                    <tr>
+                                                        <td> <button type="button" class="btn btn-dark add add-btn">Add
+                                                                More</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <button type="submit" class="btn btn-success" value="submit" name="submit"
-                                        id="save_button">Submit</button>
+                                    id="save_button">Submit</button>
 
 
 
-                                        
+
 
                             </div>
 
 
 
-                            
+
 
                         </div>
 
@@ -715,9 +727,11 @@ $result = mysqli_query($db, $sql);
 
                         $('.addmoreslots').append(
                             '<tr><td><select required name="park[]" class="typeahead form-control"><option value="">Please select park</option><option value="Universal Studios">Universal Studios</option><option value="Islands Of Adventure">Islands Of Adventure</option><option value="Volcano Bay Water">Volcano Bay Water</option></select></td><td><select class="form-control"name="transfer_method[]"><option  value="main">Main</option><option  value="train">Train</option></select></td><td><select name="time[]" class="typeahead form-control"><option value="8:00">8</option><option value="8:30">8:30</option><option value="9:00">9</option><option value="9:30">9:30</option><option value="10:00">10</option><option value="10:30">10:30</option><option value="11:00">11</option><option value="11:30">11:30</option><option value="12:00">12 Noon</option><option value="12:30">12:30</option><option value="1:00">1</option><option value="1:30">1:30</option><option value="2:00">2</option><option value="2:30">2:30</option><option value="3:00">3</option><option value="3:30">3:30</option><option value="4:00">4</option><option value="4:30">4:30</option><option value="5:00">5</option><option value="5:30">5:30</option><option value="6:00">6</option><option value="6:30">6:30</option><option value="7:00">7</option><option value="7:30">7:30</option></select></td><td><div class="form-check form-check-inline"><input type="radio" name="time_period[' +
-                            countu + ']" id="am-' + countu + '" class="form-check-input" value="AM" checked><label class="form-check-label"  for="am-' +
+                            countu + ']" id="am-' + countu +
+                            '" class="form-check-input" value="AM" checked><label class="form-check-label"  for="am-' +
                             countu +
-                            '">AM</label><input type="radio" class="form-check-input ml-2" name="time_period[' + countu +
+                            '">AM</label><input type="radio" class="form-check-input ml-2" name="time_period[' +
+                            countu +
                             ']" id="pm-' + countu +
                             '" value="PM"><label class="form-check-label" for="pm-' + countu +
                             '">PM</label></div></td><td><button type="button" class="btn btn-danger remove red">Delete</button></td>'
@@ -872,7 +886,8 @@ $result = mysqli_query($db, $sql);
 
 
 
-                <div id="menu2" class="container tab-pane active"><br>
+                <div id="menu2"
+                    class="container tab-pane <?=isset($_GET['tab']) && $_GET['tab']=='edit'?'active':'fade'?>"><br>
 
 
 

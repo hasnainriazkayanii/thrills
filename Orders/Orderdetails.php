@@ -870,7 +870,7 @@ foreach ($upcoming_orders_unsorted as $order) {
                                         $buttons = '<div class="mt-3 text-center">
                                                         <a href="../Assign/Addassign.php?id=' . $value["order_id"] . '" class="btn btn-warning btn-sm" role="button"> Ticket Info</a>';
                                            if ($_SESSION['level'] == 9){              
-                                        $buttons .= '<a href="../History/AddHistory.php?order_id=' . $value["order_id"] . '" class="btn btn-info btn-sm ml-1" role="button"> Update Usage</a>';
+                                        $buttons .= '<a href="../History/AddHistory.php?order_id=' . $value["order_id"] . '&tab=usage" class="btn btn-info btn-sm ml-1" role="button"> Update Usage</a>';
                                         $buttons .= "</div>";
                                                
                                            }
@@ -892,7 +892,7 @@ foreach ($upcoming_orders_unsorted as $order) {
                                         $buttons = '<div class="mt-3 text-center">
                                                         <a href="../Assign/Addassign.php?id=' . $value["order_id"] . '" class="btn btn-warning btn-sm" role="button"> Ticket Info</a>';
                                         if ($_SESSION['level'] == 9){
-                                        $buttons .= '<a href="../History/AddHistory.php?order_id=' . $value["order_id"] . '" class="btn btn-info btn-sm  ml-1" role="button"> Update Usage</a>';
+                                        $buttons .= '<a href="../History/AddHistory.php?order_id=' . $value["order_id"] . '&tab=usage" class="btn btn-info btn-sm  ml-1" role="button"> Update Usage</a>';
                                             
                                         }
                                         $space='';
@@ -1483,9 +1483,15 @@ console.log(expense_type);
                 console.log(res);
                 //console.log(order, " marked as ", status);
                 // location.reload();
-                // window.location.reload(true);
+                window.location.reload(true);
 
-            }
+            },
+            beforeSend: function() {
+                $(el).attr('disabled','disabled');
+            },
+            complete: function() {
+                $(el).removeAttr('disabled');
+            },
         });
 
     }

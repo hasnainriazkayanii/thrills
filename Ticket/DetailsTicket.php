@@ -452,7 +452,7 @@ $targetpage = "https://dbaseconnect.com/cheapthrills/Ticket/DetailsTicket.php";
 
                       <td>" . $status . "</td>
 
-                      <td style='vertical-align: middle;'><a href='../History/AddHistory.php?id=" . $row['id'] . "' class='btn btn-info' role='button'> Ticket Details</a></td>
+                      <td style='vertical-align: middle;'><a href='../History/AddHistory.php?id=" . $row['id'] . "&tab=edit' class='btn btn-info' role='button'> Ticket Details</a></td>
 
                      
 
