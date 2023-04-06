@@ -474,47 +474,47 @@ if (isset($_POST['orderadd'])) {
 
 
 
-    if ($hideorder != "1") {
+//     if ($hideorder != "1") {
 
-        $client_1 = new Client($account_sid, $auth_token);
+//         $client_1 = new Client($account_sid, $auth_token);
 
-        try {
+//         try {
 
-            $query_admin_number = "SELECT group_concat(value) as numbers from settings where id in (1,2)";
+//             $query_admin_number = "SELECT group_concat(value) as numbers from settings where id in (1,2)";
 
-            $admin_number = mysqli_fetch_assoc(mysqli_query($db, $query_admin_number))['numbers'];
+//             $admin_number = mysqli_fetch_assoc(mysqli_query($db, $query_admin_number))['numbers'];
 
-            $numbers = explode(',', $admin_number);
+//             $numbers = explode(',', $admin_number);
 
-            foreach ($numbers as $v) {
+//             foreach ($numbers as $v) {
 
-                $resp_1 = $client_1->messages->create(
+//                 $resp_1 = $client_1->messages->create(
 
-                    $v,
+//                     $v,
 
-                    array(
+//                     array(
 
-                        'from' => $twilio_number,
+//                         'from' => $twilio_number,
 
-                      //  'body' => "$sales_name ($" . $sales_commission . ") scheduled $customer for $adults/$kids $theme_park_name $ticket_type34 $visit_date for $" . $total
+//                       //  'body' => "$sales_name ($" . $sales_commission . ") scheduled $customer for $adults/$kids $theme_park_name $ticket_type34 $visit_date for $" . $total
 
-                        'body' => "$sales_name ($" . $sales_commission . ") scheduled $customer for $adults/$kids $ticket_type34 $visit_date for $" . $total
+//                         'body' => "$sales_name ($" . $sales_commission . ") scheduled $customer for $adults/$kids $ticket_type34 $visit_date for $" . $total
 
-                    )
+//                     )
 
-                );
+//                 );
 
-            }
+//             }
 
 
 
-        } catch (Exception $e) {
+//         } catch (Exception $e) {
 
-//            var_dump($e);
+// //            var_dump($e);
 
-        }
+//         }
 
-    }
+//     }
 
 
 
@@ -1939,7 +1939,7 @@ include('../includes/header.php');
 
                             <div class="form-group d-flex">
 
-                                <select class="form-control" id="sales_person" name="sales_personID" onchange="change_sales_person()" required>
+                                <select  class="form-control" id="sales_person" name="sales_personID" onchange="change_sales_person()" required>
 
                                     <?php
 
@@ -2013,7 +2013,7 @@ include('../includes/header.php');
 
                                 </select>
 
-                                <input type="text" class="form-control" name="sales_commission" id="commission" value='<?php echo @$sales_commission ?>' placeholder="Commission" <?php  if($_SESSION['level'] <9) echo 'readonly' ?> required>
+                                <input type="text" data-orderid="<?=@$_GET['order_id']?>" class="form-control" name="sales_commission" id="commission" value='<?php echo @$sales_commission ?>' placeholder="Commission" <?php  if($_SESSION['level'] <9) echo 'readonly' ?> required>
 
                             </div>
 
@@ -2658,7 +2658,6 @@ $('#datepicker').change(function () {
        
 
         function change_sales_person() {
-
             var commission = document.getElementById("sales_person").value.split('*****');
 
             var sales_commission = commission['0']
@@ -2878,7 +2877,7 @@ $('#datepicker').change(function () {
         function total_value() {
 
             var num1 = document.getElementById('adults').value;
-
+           
             //console.log(num1);
 
 
@@ -2982,8 +2981,20 @@ $('#datepicker').change(function () {
             //balance();
 
             calculate_due();
+            calulate_comission();
+           
 
-         var commission = document.getElementById("sales_person").value.split('*****');
+        }
+        if("<?php echo @$_GET['order_id'] ?>" != ""){
+            console.log('coming here');
+            var totalHits=0;
+        }
+        else{
+            var totalHits=2;
+        }
+
+        function calulate_comission(){
+            var commission = document.getElementById("sales_person").value.split('*****');
 
             var sales_commission = commission['0']
 
@@ -3018,17 +3029,14 @@ $('#datepicker').change(function () {
 
 
             console.log("Sales Commission ID :::: ", sales_commission);
-
-
-
-
-
-            document.getElementById("commission").value = parseInt(comission_value) * parseInt(total_guests);
-
+            if(totalHits>1) {
+                totalHits++;
+                document.getElementById("commission").value = parseInt(comission_value) * parseInt(total_guests);
+            }
+            else{
+                totalHits++;
+            }
         }
-
-
-
         function calculate_due() {
 
             /*
@@ -3172,8 +3180,9 @@ $('#datepicker').change(function () {
 
 
         document.getElementById('addOrder').addEventListener('click', validateOrderData);
-
-        document.getElementById('addEntry').addEventListener('click', validateOrderData);
+        if(jQuery("#addEntry").length>0){
+            document.getElementById('addEntry').addEventListener('click', validateOrderData);
+        }
 
 
 
