@@ -132,7 +132,7 @@ include('../includes/header.php');
 
        <?php  };?>
 
-                  <div class="col-md-3 text-center btns-design btn" ><a href="sms_settings.php">SMS</a></div>
+                  
 
                   <div class="col-md-3 text-center btns-design btn" ><a href="text_messages.php">Text Messages</a></div>
 

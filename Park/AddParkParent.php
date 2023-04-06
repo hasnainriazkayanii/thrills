@@ -111,8 +111,12 @@
       <label for="name">Theme Park Code*</label>
         <input type="text" class="form-control" required name="code" id="code" aria-describedby="code" value='<?=$park['code']?>' placeholder="Park Code *">
         
-            <label for="name">Active (1=Yes 0=No)*</label>
-                <input type="text" class="form-control" required name="active" id="active" aria-describedby="active" value='<?=$park['is_universal']?>' placeholder="Active *">
+            <label for="name">Active*</label>
+              <select name="active" id="active" class="form-control" required>
+                <option <?=$park['is_universal']==1?'Selected':''?> value="1">Active</option>
+                <option  <?=$park['is_universal']==0?'Selected':''?> value="0">Inactive</option>
+              </select>
+        
                 
                 
   <div class="form-group">
@@ -149,7 +153,10 @@ $img = $park['park_logo'];
   
   <div class="form-group">
     <label for="pactive">Active*</label>
-    <input type="text" class="form-control" required name="pactive" id="active" aria-describedby="pactive" placeholder="Active*">
+    <select name="pactive" id="pactive" class="form-control" required>
+                <option  value="1">Active</option>
+                <option   value="0">Inactive</option>
+              </select>
   </div>
   
   

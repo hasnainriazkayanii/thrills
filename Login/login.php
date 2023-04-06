@@ -11,7 +11,7 @@ if(isset($_POST['sub'])){
   $password = mysqli_real_escape_string($db,$_POST['password']); 
 
 
- $sql = "SELECT id,status,level FROM login_user WHERE email ='$email' and password = '$password'";
+ $sql = "SELECT id,status,level , user_name FROM login_user WHERE email ='$email' and password = '$password'";
 
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -19,6 +19,7 @@ if(isset($_POST['sub'])){
       $status = $row['status'];
       $id = $row['id'];
       $level = $row['level'];
+      $user_name = $row['user_name'];
 
      if($count == 1) {
 
@@ -34,6 +35,7 @@ if(isset($_POST['sub'])){
       
 
       $_SESSION['login_user'] = $email;
+      $_SESSION['login_user_name'] = $user_name;
 
       $_SESSION['status'] =$status;
       

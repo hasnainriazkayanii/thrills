@@ -47,7 +47,17 @@ else{
 $guests = mysqli_query($db,$guests_sql);
 //var_dump($guests_sql);
 //get order
-$order_sql = "SELECT o.*,t.name as theme_park_name,c.first_name,c.last_name FROM `order` o LEFT JOIN customer c on c.id = o.customer_id LEFT JOIN theme_parks t ON t.id = o.theme_park_id LEFT JOIN tickettypes tt ON tt.id = o.ticket_type_id WHERE o.id='$order_id'";
+$order_sql = "SELECT o.*,
+t.name as theme_park_name,
+c.first_name,
+c.last_name,
+partners.name as user_name
+FROM `order` o 
+LEFT JOIN customer c on c.id = o.customer_id 
+LEFT JOIN theme_parks t ON t.id = o.theme_park_id 
+LEFT JOIN tickettypes tt ON tt.id = o.ticket_type_id
+LEFT JOIN `partners`  ON partners.id = o.sales_personID
+WHERE o.id='$order_id'";
 $order = mysqli_fetch_assoc(mysqli_query($db,$order_sql));
 $theme_park_id = $order['theme_park_id'];
 $customer = $order['customer'];
@@ -61,23 +71,27 @@ $ticket_type = $order['ticket_type'];
 $order_id = $order['order_id'];
 $is_hide = $order['is_hide'];
 $date_of_visit = $order['date_of_visit'];
+$visit_date   = date('D M j, Y', strtotime($date_of_visit));
+$commission = $order['sales_commission'];
+$salesPerson = $order['user_name'];
+$currentUserName = $_SESSION['login_user_name'];
 
 $time = strtotime($date_of_visit);
 $formatDate = date('m/d/y',$time);
 $today=date("m/d/y");
 
 if($formatDate==date("m/d/y")){
-    $visit_date = "Today";
+    $date_of_visit = "Today";
 }
 else if ($formatDate==date('m/d/y', strtotime($today. ' +1 days'))){
-    $visit_date = 'TOMORROW';
+    $date_of_visit = 'TOMORROW';
 }
 else{
-    $visit_date = date('M d', strtotime($date_of_visit));
+    $date_of_visit = date('D M j, Y', strtotime($date_of_visit));
 }
 
 
-$order_time = $order['time'];
+$order_time = date("g:i A",strtotime($order['time']));
 
 $park_code = preg_replace('/[^a-zA-Z]/', '', $order['order_id']);
 $text_msg1 = "SELECT * FROM `text_messages` WHERE theme_park_id='$theme_park_id' and status = $status limit 1"; // previously it was 2
@@ -96,8 +110,12 @@ $msg_1 = str_replace('{%kids%}',$kids,$msg_1);
 $msg_1 = str_replace('{%ototal%}',$total,$msg_1);
 $msg_1 = str_replace('{%ttype%}',$ticket_type,$msg_1);
 $msg_1 = str_replace('{%onumber%}',$order_id,$msg_1);
-$msg_1 = str_replace('{%datevisit%}',$date_of_visit,$msg_1);
+$msg_1 = str_replace('{%datevisit%}',$visit_date,$msg_1);
 $msg_1 = str_replace('{%otime%}',$order_time,$msg_1);
+$msg_1 = str_replace('{%commission%}',$commission,$msg_1);
+$msg_1 = str_replace('{%salesperson%}',$salesPerson,$msg_1);
+$msg_1 = str_replace('{%currentusername%}',$currentUserName,$msg_1);
+$msg_1 = str_replace('{%todayortomorrow%}',$date_of_visit,$msg_1);
 
 
 $admin_message = str_replace('{%fname%}',$first_name,$admin_message);
@@ -109,8 +127,12 @@ $admin_message = str_replace('{%kids%}',$kids,$admin_message);
 $admin_message = str_replace('{%ototal%}',$total,$admin_message);
 $admin_message = str_replace('{%ttype%}',$ticket_type,$admin_message);
 $admin_message = str_replace('{%onumber%}',$order_id,$admin_message);
-$admin_message = str_replace('{%datevisit%}',$date_of_visit,$admin_message);
+$admin_message = str_replace('{%datevisit%}',$visit_date,$admin_message);
 $admin_message = str_replace('{%otime%}',$order_time,$admin_message);
+$admin_message = str_replace('{%commission%}',$commission,$admin_message);
+$admin_message = str_replace('{%salesperson%}',$salesPerson,$admin_message);
+$admin_message = str_replace('{%currentusername%}',$currentUserName,$admin_message);
+$admin_message = str_replace('{%todayortomorrow%}',$date_of_visit,$admin_message);
 
 //echo $msg_1 . " <--> ";
 

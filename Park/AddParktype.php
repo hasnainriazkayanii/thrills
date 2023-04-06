@@ -9,10 +9,13 @@
     }
  if(isset($_POST['customer'])){
     $park_name=$_POST['name'];
+    $parent_id = $_POST['parentid'];
+    $parkcode = $_POST['pcode'];
+    $pactive = $_POST['pactive'];
    $create_date=time();
    $update_date=time();
-   $park_insert = "INSERT INTO theme_parks (name)
-    VALUES ('$park_name')";
+   $park_insert = "INSERT INTO theme_parks (name,code,active,theme_park_parent_id)
+    VALUES ('$park_name','$parkcode','$pactive','$parent_id')";
    if( $result = mysqli_query($db,$park_insert));
     $id  = mysqli_insert_id($db);
     if($id){
@@ -26,6 +29,8 @@
     }
     
     include('../includes/header.php');
+    $theme_parks_query = "SELECT * FROM  `theme_park_parents` where is_universal = 1 ORDER BY code ASC";
+    $theme_parks = mysqli_query($db, $theme_parks_query);
 ?>
 
 
@@ -47,18 +52,33 @@
   </div>
   
   <div class="form-group">
-    <label for="parentid">Parent ID *</label>
-    <input type="text" class="form-control" required name="parentid" id="theme_park_parent_id" aria-describedby="parentid" placeholder="Parent ID *">
-  </div>
-  
-  <div class="form-group">
     <label for="pcode">Park Code *</label>
-    <input type="text" class="form-control" required name="pcode" id="code" aria-describedby="pcode" placeholder="Park Code*">
+    <select name="pcode" id="code" class="form-control" required>
+        <option value="">Select Park Code</option>
+        <?php
+
+          while($theme_park = mysqli_fetch_assoc($theme_parks)) {
+              $tp_name=$theme_park['name'];
+              $tp_id = $theme_park['id'];
+              $tp_code = $theme_park['code'];
+              ?>
+
+              <option data-id="<?=$tp_id?>" value="<?=$tp_code?>" ><?=$tp_code?></option>
+
+              <?php
+          }
+        ?>
+    </select>
+    <input type="hidden" class="form-control" required name="parentid" id="theme_park_parent_id" aria-describedby="parentid" placeholder="Parent ID *">
   </div>
   
   <div class="form-group">
     <label for="pactive">Active*</label>
-    <input type="text" class="form-control" required name="pactive" id="active" aria-describedby="pactive" placeholder="Active*">
+    <select name="pactive" id="active" class="form-control" required>
+        <option value="1">Active</option>
+        <option  value="0">Inactive</option>
+    </select>
+        
   </div>
   
   
@@ -111,7 +131,16 @@
     </div>
 
  
-
+<script>
+  $(function(){
+    $('#code').on('change',function(){
+      var selectedOption = $('#code option:selected');
+      var selectedDataId = selectedOption.attr('data-id');
+      $("#theme_park_parent_id").val(selectedDataId);
+      console.log(selectedDataId);
+    });
+  });
+</script>
   </body>
 
 </html>

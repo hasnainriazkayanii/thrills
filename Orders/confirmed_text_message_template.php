@@ -1,7 +1,20 @@
 <?php
+session_start();
 include 'custom_message_tag.php';
 
-$order_sql = "SELECT o.*,tt.ticket_name,tt.ticket_type as main_ticket_type,t.name as theme_park_name,c.first_name,c.last_name FROM `order` o LEFT JOIN customer c on c.id = o.customer_id LEFT JOIN theme_parks t ON t.id = o.theme_park_id LEFT JOIN tickettypes tt ON tt.id = o.ticket_type_id WHERE o.order_id='$order_id'";
+$order_sql = "SELECT o.*,
+tt.ticket_name,
+tt.ticket_type as main_ticket_type,
+t.name as theme_park_name,
+c.first_name,
+c.last_name,
+partners.name as user_name
+FROM `order` o 
+LEFT JOIN customer c on c.id = o.customer_id 
+LEFT JOIN theme_parks t ON t.id = o.theme_park_id 
+LEFT JOIN tickettypes tt ON tt.id = o.ticket_type_id 
+LEFT JOIN `partners`  ON partners.id = o.sales_personID
+WHERE o.order_id='$order_id'";
 $order = mysqli_fetch_assoc(mysqli_query($db,$order_sql));
 $theme_park_id = $order['theme_park_id'];
 $customer = $order['customer'];
@@ -14,8 +27,26 @@ $total = $order['total'];
 $ticket_type = $order['ticket_type'];
 $order_id = $order['order_id'];
 $is_hide = $order['is_hide'];
+$order_time = date("g:i A",strtotime($order['time']));
 $date_of_visit = $order['date_of_visit'];
+$visit_date   = date('D M j, Y', strtotime($date_of_visit));
 $main_ticket_type = $order['ticket_name'];
+$commission = $order['sales_commission'];
+$salesPerson = $order['user_name'];
+$currentUserName = $_SESSION['login_user_name'];
+$time = strtotime($date_of_visit);
+$formatDate = date('m/d/y',$time);
+$today=date("m/d/y");
+
+if($formatDate==date("m/d/y")){
+    $date_of_visit = "Today";
+}
+else if ($formatDate==date('m/d/y', strtotime($today. ' +1 days'))){
+    $date_of_visit = 'TOMORROW';
+}
+else{
+    $date_of_visit = date('D M j, Y', strtotime($date_of_visit));
+}
 
 
 $sql = "SELECT * FROM `theme_parks` WHERE `id`={$order['theme_park_id']}";
@@ -107,7 +138,6 @@ else{
 
 
 }
-
-$message = custom_taga($message,$first_name,$last_name,$customer,$theme_park_name,$adults,$kids,$total,$ticket_type,$order_id,$date_of_visit,$order_time);
+$message = custom_taga($message,$first_name,$last_name,$customer,$theme_park_name,$adults,$kids,$total,$ticket_type,$order_id,$date_of_visit,$order_time,$commission,$salesPerson,$currentUserName,$visit_date);
 
 ?>
