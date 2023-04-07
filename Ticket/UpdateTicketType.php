@@ -221,11 +221,11 @@ $theme_parks = mysqli_query($db, $theme_parks_query);
                 <div class="form-group">
                 <label for="place">Active *</label>
 
-                <select value='<?=$user['active']?>' class="form-control" name="active">
+                <select value='<?=$user['adctive']?>' class="form-control" name="active">
 
-                    <option  value="True">true</option>
+                    <option <?=($user['adctive']=='True'?'selected':'')?>   value="True">true</option>
 
-                    <option value="False">false</option>
+                    <option  <?=($user['adctive']=='False'?'selected':'')?> value="False">false</option>
 
                 </select>
                 </div>

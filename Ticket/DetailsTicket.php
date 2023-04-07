@@ -269,7 +269,7 @@ $targetpage = "https://dbaseconnect.com/cheapthrills/Ticket/DetailsTicket.php";
 
                     $originalDate = $row12["expire_date"];
 
-                    $newDate = date("Y-m-d", strtotime($originalDate));
+                    $newDate = date("m/d/Y", strtotime($originalDate));
 
                     $current_date = date("Y-m-d");
 
@@ -294,7 +294,7 @@ $targetpage = "https://dbaseconnect.com/cheapthrills/Ticket/DetailsTicket.php";
 
                      
 
-                      <td style='vertical-align: middle;'><a href='../History/AddHistory.php?id=" . $row12['id'] . "' class='btn btn-info' role='button'> Ticket Details</a></td>
+                      <td style='vertical-align: middle;'><a href='../History/AddHistory.php?id=" . $row12['id'] . "&tab=edit' class='btn btn-info' role='button'> Ticket Details</a></td>
 
                     
 
